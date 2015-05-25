@@ -1,29 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="col-md-12">
+    <p id="notice"><%= notice %></p>
 
-<h1>Listing Listings</h1>
+    <h1>Welcome To Our Home</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Amount</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <table>
+      <thead>
+        <tr>
+          <th>Amount</th>
+          <th>User</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @listings.each do |listing| %>
-      <tr>
-        <td><%= listing.amount %></td>
-        <td><%= listing.user_id %></td>
-        <td><%= link_to 'Show', listing %></td>
-        <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
-        <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @listings.each do |listing| %>
+          <tr>
+            <td><%= listing.amount %></td>
+            <td><%= listing.user_id %></td>
+            <td><%= link_to 'Show', listing %></td>
+            <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
+            <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<br>
+    <br>
 
-<%= link_to 'New Listing', new_listing_path %>
+    <%= link_to 'New Listing', new_listing_path %>
+    
+  </div>
+</div>

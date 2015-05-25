@@ -1,6 +1,15 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
-
+  def beranda
+    
+  end
+  def legalitas
+    
+  end
+  
+  def struktur
+    
+  end
   # GET /listings
   # GET /listings.json
   def index
