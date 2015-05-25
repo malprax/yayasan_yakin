@@ -17,12 +17,16 @@ development:
   <<: *defaults 
   
 
-test: &test
-  database: yayasan_yakin_test 
-  <<: *defaults   
+# test: &test
+#   database: yayasan_yakin_test
+#   <<: *defaults
 
 # production:  
 #   database: contact_book_production
 #   <<: *defaults 
-cucumber:
-  <<: *test
+
+
+# Error running './configure --prefix=/Users/macbook/.rvm/rubies/ruby-2.0.0-p645  --with-opt-dir=/usr/local/opt/libyaml:/usr/local/opt/readline:/usr/local/opt/libksba:/usr/local/opt/openssl --without-tcl --without-tk --disable-install-doc --enable-shared',
+# showing last 15 lines of /Users/macbook/.rvm/log/1432481573_ruby-2.0.0-p645/configure.log
+
+# rvm reinstall ruby-2.2.0 --with-openssl-dir=/path/to/openssl
