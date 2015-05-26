@@ -10,11 +10,13 @@ class YearsController < ApplicationController
   # GET /years/1
   # GET /years/1.json
   def show
+    @month = @year.months.order('created_at')
   end
 
   # GET /years/new
   def new
     @year = Year.new
+    @month = @year.months.build
   end
 
   # GET /years/1/edit
@@ -28,7 +30,7 @@ class YearsController < ApplicationController
 
     respond_to do |format|
       if @year.save
-        format.html { redirect_to @year, notice: 'Year was successfully created.' }
+        format.html { redirect_to @years, notice: 'Year was successfully created.' }
         format.json { render :show, status: :created, location: @year }
       else
         format.html { render :new }
@@ -69,6 +71,6 @@ class YearsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def year_params
-      params.require(:year).permit(:tahun)
+      params.require(:year).permit(:tahun, :months_attributes => [:id, :year_id, :bulan])
     end
 end
