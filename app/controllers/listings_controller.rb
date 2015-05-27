@@ -14,6 +14,10 @@ class ListingsController < ApplicationController
   # GET /listings.json
   def index
     @listings = Listing.all
+    @donaturs = Donatur.all
+    @years = Year.all
+    # @months = Month.all
+    # @month = @year.months.order('created_at')
   end
 
   # GET /listings/1
@@ -37,7 +41,7 @@ class ListingsController < ApplicationController
 
     respond_to do |format|
       if @listing.save
-        format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
+        format.html { redirect_to listings_path, notice: 'Listing was successfully created.' }
         format.json { render :show, status: :created, location: @listing }
       else
         format.html { render :new }
@@ -51,7 +55,7 @@ class ListingsController < ApplicationController
   def update
     respond_to do |format|
       if @listing.update(listing_params)
-        format.html { redirect_to @listing, notice: 'Listing was successfully updated.' }
+        format.html { redirect_to listings_path, notice: 'Listing was successfully updated.' }
         format.json { render :show, status: :ok, location: @listing }
       else
         format.html { render :edit }
@@ -77,7 +81,8 @@ class ListingsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    #:donatur_attributes => [:id, :name, :listing_id], :years_attributes => [:id, :tahun, :listings_id, :months_attributes => [:id, :bulan, :year_id]]
     def listing_params
-      params.require(:listing).permit(:amount, :user_id)
+      params.require(:listing).permit(:amount, :donatur_id, :year_id, :month_id )
     end
 end

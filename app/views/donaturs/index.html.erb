@@ -1,27 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <p id="notice"><%= notice %></p>
 
-<h1>Listing Donaturs</h1>
+      <table class="table table-hover table-condensed">
+        <thead>
+          <tr>
+            <th>Donatur Mesjid Babussalam</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <tbody>
+          <% @donaturs.each do |donatur| %>
+            <tr>
+              <td><%= link_to donatur.name, donatur %></td>
+              <td><%= link_to 'Edit', edit_donatur_path(donatur) %></td>
+              <td><%= link_to 'Hapus', donatur, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-  <tbody>
-    <% @donaturs.each do |donatur| %>
-      <tr>
-        <td><%= donatur.name %></td>
-        <td><%= link_to 'Show', donatur %></td>
-        <td><%= link_to 'Edit', edit_donatur_path(donatur) %></td>
-        <td><%= link_to 'Destroy', donatur, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <br>
 
-<br>
-
-<%= link_to 'New Donatur', new_donatur_path %>
+      <%= link_to 'Tambah Donatur', new_donatur_path %>
+      
+    </div>
+  </div>
+</div>

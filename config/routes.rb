@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'legalitas' => 'listings#legalitas'
   get 'struktur' => 'listings#struktur'
   get 'beranda' => 'listings#beranda'
-  get 'donatur' => 'listings#index'
+  # get 'donatur' => 'd#index'
   
 
 

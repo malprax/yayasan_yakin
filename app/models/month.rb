@@ -1,5 +1,6 @@
 class Month < ActiveRecord::Base
   belongs_to :year
+  has_many :listings, through: :years, dependent: :destroy
   before_save :set_urut
   
   # def sudah_ada_bulan

@@ -28,7 +28,7 @@ class DonatursController < ApplicationController
 
     respond_to do |format|
       if @donatur.save
-        format.html { redirect_to @donatur, notice: 'Donatur was successfully created.' }
+        format.html { redirect_to donaturs_path, notice: 'Donatur was successfully created.' }
         format.json { render :show, status: :created, location: @donatur }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class DonatursController < ApplicationController
   def update
     respond_to do |format|
       if @donatur.update(donatur_params)
-        format.html { redirect_to @donatur, notice: 'Donatur was successfully updated.' }
+        format.html { redirect_to donaturs_path, notice: 'Donatur was successfully updated.' }
         format.json { render :show, status: :ok, location: @donatur }
       else
         format.html { render :edit }

@@ -2,25 +2,52 @@
   <div class="col-md-12">
     <p id="notice"><%= notice %></p>
     <table class="table table-hover table-condensed">
+
       <thead>
         <tr>
-          <th>Amount</th>
-          <th>User</th>
+          <th>Nama Donatur</th>
+          <th>Jumlah</th>
+          <th>Tahun</th>
+          <th>Januari</th>
+          <th>Februari</th>
+          <th>Maret</th>
+          <th>April</th>
+          <th>Mei</th>
+          <th>Juni</th>
+          <th>Juli</th>
+          <th>Agustus</th>
+          <th>September</th>
+          <th>Oktober</th>
+          <th>Nopember</th>
+          <th>Desember</th>
           <th colspan="3"></th>
         </tr>
       </thead>
-
       <tbody>
         <% @listings.each do |listing| %>
           <tr>
+            <th><%= listing.donatur.name rescue nil %></th>
             <td><%= listing.amount %></td>
-            <td><%= listing.user_id %></td>
+            <td><%= listing.year.tahun  rescue nil %></td>
+            <td><%= listing.januari %></td>
+            <td><%= listing.februari %></td>
+            <td><%= listing.maret %></td>
+            <td><%= listing.april %></td>
+            <td><%= listing.mei %></td>
+            <td><%= listing.juni %></td>
+            <td><%= listing.juli %></td>
+            <td><%= listing.agustus %></td>
+            <td><%= listing.september %></td>
+            <td><%= listing.oktober %></td>
+            <td><%= listing.nopember %></td>
+            <td><%= listing.desember %></td>
             <td><%= link_to 'Show', listing %></td>
             <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
             <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>
+
     </table>
 
     <br>

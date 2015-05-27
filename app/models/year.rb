@@ -1,7 +1,8 @@
 class Year < ActiveRecord::Base
+  has_many :listings, dependent: :destroy
   before_create :assign_month
   has_many :months #, dependent: :destroy
-  accepts_nested_attributes_for :months
+  accepts_nested_attributes_for :months, allow_destroy: true
   
   protected
   def assign_month

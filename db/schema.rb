@@ -24,17 +24,31 @@ ActiveRecord::Schema.define(version: 20150527061557) do
 
   create_table "listings", force: :cascade do |t|
     t.string   "amount"
-    t.string   "user_id"
+    t.integer  "year_id"
+    t.integer  "month_id"
+    t.integer  "donatur_id"
+    t.decimal  "januari"
+    t.decimal  "februari"
+    t.decimal  "maret"
+    t.decimal  "april"
+    t.decimal  "mei"
+    t.decimal  "juni"
+    t.decimal  "juli"
+    t.decimal  "agustus"
+    t.decimal  "september"
+    t.decimal  "oktober"
+    t.decimal  "november"
+    t.decimal  "desember"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "months", force: :cascade do |t|
     t.string   "bulan"
-    t.string   "year_id"
+    t.integer  "year_id"
+    t.integer  "urut"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "urut"
   end
 
   create_table "users", force: :cascade do |t|
@@ -57,6 +71,7 @@ ActiveRecord::Schema.define(version: 20150527061557) do
 
   create_table "years", force: :cascade do |t|
     t.string   "tahun"
+    t.integer  "listing_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
