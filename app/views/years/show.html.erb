@@ -1,9 +1,31 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Tahun:</strong>
-  <%= @year.tahun %>
-</p>
-
-<%= link_to 'Edit', edit_year_path(@year) %> |
-<%= link_to 'Back', years_path %>
+<div class="container-fluid">
+  <div class="col-md-12">
+    <div class="row">
+      <p id="notice"><%= notice %></p>
+      <p>
+        <strong>Tahun:</strong>
+        <%= @year.tahun %>
+      </p>
+      <% unless @month.blank? %>
+          <% @month.each do |g| %>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+              
+                    <ul class="list-group">
+                       <%= g.bulan %>
+                    </ul>
+                    <div class="panel-footer">
+                        <%= link_to "Edit", edit_year_month_path(@year, g) %> || <%= link_to "Hapus", ([@year, g]), method: :delete, data:{confirm: "Are You Sure"} %>
+                    </div>
+            </div>
+          <% end %>    
+      <% end %>
+      <div class="col-sm-12">
+        <p><%= link_to "Buat Bulan", new_year_month_path(@year)  %></p>
+        <p><%= link_to 'Edit', edit_year_path(@year) %> |
+        <%= link_to 'Kembali', years_path %></p>
+      </div>
+      
+      
+    </div>
+  </div>
+</div>

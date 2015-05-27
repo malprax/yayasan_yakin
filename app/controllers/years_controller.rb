@@ -1,6 +1,7 @@
 class YearsController < ApplicationController
   before_action :set_year, only: [:show, :edit, :update, :destroy]
 
+
   # GET /years
   # GET /years.json
   def index
@@ -30,7 +31,7 @@ class YearsController < ApplicationController
 
     respond_to do |format|
       if @year.save
-        format.html { redirect_to @years, notice: 'Year was successfully created.' }
+        format.html { redirect_to years_url, notice: 'Year was successfully created.' }
         format.json { render :show, status: :created, location: @year }
       else
         format.html { render :new }

@@ -1,10 +1,12 @@
 class MonthsController < ApplicationController
+  before_action :set_year, only: [:new, :create, :edit, :update, :destroy ]
   before_action :set_month, only: [:show, :edit, :update, :destroy]
+
 
   # GET /months
   # GET /months.json
   def index
-    @months = Month.all
+    @months = Month.order('urut asc')
   end
 
   # GET /months/1
@@ -13,8 +15,12 @@ class MonthsController < ApplicationController
   end
 
   # GET /months/new
-  def new
-    @month = Month.new
+  def new 
+    # unless Month.count == 12
+      @month = @year.months.build
+    # else
+       # redirect_to year_path(@year), notice: 'Maaf Bulan Sudah Penuh'
+    # end
   end
 
   # GET /months/1/edit
@@ -24,11 +30,11 @@ class MonthsController < ApplicationController
   # POST /months
   # POST /months.json
   def create
-    @month = Month.new(month_params)
+    @month = @year.months.create(month_params)
 
     respond_to do |format|
       if @month.save
-        format.html { redirect_to @month, notice: 'Month was successfully created.' }
+        format.html { redirect_to year_path(@year), notice: 'Month was successfully created.' }
         format.json { render :show, status: :created, location: @month }
       else
         format.html { render :new }
@@ -42,7 +48,7 @@ class MonthsController < ApplicationController
   def update
     respond_to do |format|
       if @month.update(month_params)
-        format.html { redirect_to @month, notice: 'Month was successfully updated.' }
+        format.html { redirect_to year_path(@year), notice: 'Month was successfully updated.' }
         format.json { render :show, status: :ok, location: @month }
       else
         format.html { render :edit }
@@ -56,7 +62,7 @@ class MonthsController < ApplicationController
   def destroy
     @month.destroy
     respond_to do |format|
-      format.html { redirect_to months_url, notice: 'Month was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Month was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,9 +70,15 @@ class MonthsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_month
+      @months = Month.all
       @month = Month.find(params[:id])
     end
-
+    
+    def set_year
+      @year = Year.find(params[:year_id])
+    end
+    
+    
     # Never trust parameters from the scary internet, only allow the white list through.
     def month_params
       params.require(:month).permit(:bulan, :year_id)

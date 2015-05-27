@@ -1,4 +1,4 @@
-<%= form_for(@month) do |f| %>
+<%= form_for([@year, @month], :html => {:multipart => true}) do |f| %>
   <% if @month.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@month.errors.count, "error") %> prohibited this month from being saved:</h2>
@@ -11,15 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :bulan %><br>
-    <%= f.text_field :bulan %>
-  </div>
-  <div class="field">
-    <%= f.label :year_id %><br>
-    <%= f.text_field :year_id %>
+    <%= f.select :bulan, ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November','Desember'], {}, class:"form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class:"btn btn-success" %>
   </div>
 <% end %>

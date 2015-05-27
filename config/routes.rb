@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :donaturs
+
   devise_for :users
   resources :listings
   get 'legalitas' => 'listings#legalitas'
@@ -7,9 +9,11 @@ Rails.application.routes.draw do
   get 'donatur' => 'listings#index'
   
 
-  resources :months
 
-  resources :years
+
+  resources :years do
+      resources :months
+  end
   
   root 'listings#beranda'
 
