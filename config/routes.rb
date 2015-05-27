@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :attendance_sheets
+
   resources :donaturs
 
   devise_for :users
