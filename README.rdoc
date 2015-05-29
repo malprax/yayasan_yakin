@@ -31,3 +31,5 @@ ini mau dipelajari bikin absensi
 tidak ada cara lain mesti ikut bongkar bongkar fedena project
 
 http://stackoverflow.com/questions/11991892/rails-3-taking-attendance-form-how-to-create-multiple-records
+
+hari ini sudah tamat jquery web
