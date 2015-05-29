@@ -35,3 +35,4 @@ http://stackoverflow.com/questions/11991892/rails-3-taking-attendance-form-how-t
 hari ini sudah tamat jquery web
 dan sekarang lagi coba html dan css
 codecademy lebih jelas manfaatnya daripada yang lain
+mudah mudahan larut malam ini bisa selesai cssnya
