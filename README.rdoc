@@ -40,3 +40,4 @@ pending dulu kerjaan di upwork
 ngga pernah dapat kerjaan ini bulan
 
 sudah mengerti tentang float
+sudah ngerti tentang parent dan nth-child()
