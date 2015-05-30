@@ -42,3 +42,4 @@ ngga pernah dapat kerjaan ini bulan
 sudah mengerti tentang float
 sudah ngerti tentang parent dan nth-child()
 sudah ngerti tentang margin 
+sudah ngerti tentang padding
