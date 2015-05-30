@@ -44,3 +44,4 @@ sudah ngerti tentang parent dan nth-child()
 sudah ngerti tentang margin 
 sudah ngerti tentang padding
 sudah ngerti tentang em
+sudah ngerti tentang static
