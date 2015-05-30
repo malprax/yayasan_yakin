@@ -38,3 +38,5 @@ codecademy lebih jelas manfaatnya daripada yang lain
 mudah mudahan larut malam ini bisa selesai cssnya
 pending dulu kerjaan di upwork 
 ngga pernah dapat kerjaan ini bulan
+
+sudah mengerti tentang float
