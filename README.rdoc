@@ -45,3 +45,4 @@ sudah ngerti tentang margin
 sudah ngerti tentang padding
 sudah ngerti tentang em
 sudah ngerti tentang static
+sudah ngerti tentang apa itu inline-block block inline none
