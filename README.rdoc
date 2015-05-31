@@ -49,3 +49,5 @@ sudah ngerti tentang apa itu inline-block block inline none
 belum jelas pelajaran position
 belajar rails lagi
 belajar javascript
+
+hari ini belajar rails tambah duino gem
