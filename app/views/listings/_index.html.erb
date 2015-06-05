@@ -31,3 +31,30 @@
     <%= link_to 'New Listing', new_listing_path %>
     
   </div>
+  
+  <% if list.month.bulan == "Januari" %>
+       <td><%=  "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" rescue nil %></td>
+  <% elsif list.month.bulan == "Februari" %>
+       <td><%=  "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" rescue nil %></td>
+  <% elsif list.month.bulan == "Maret" %>
+       <td><%=  "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" rescue nil %></td>
+  <% elsif list.month.bulan == "April" %>
+       <td><%=  "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" rescue nil %></td>
+  <% elsif list.month.bulan == "Mei" %>
+       <td><%=  "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" rescue nil %></td>
+  <% elsif list.month.bulan == "Juni" %>
+       <td><%=  "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" rescue nil %></td>
+  <% elsif list.month.bulan == "Juli" %>
+       <td><%=  "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" rescue nil %></td>
+  <% elsif list.month.bulan == "Agustus" %>
+       <td><%=  "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" rescue nil %></td>
+  <% elsif list.month.bulan == "September" %>
+       <td><%=  "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" rescue nil %></td>
+  <% elsif list.month.bulan == "Oktober" %>
+       <td><%=  "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" rescue nil %></td>
+  <% elsif list.month.bulan == "November" %>
+       <td><%=  "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" rescue nil %></td>
+  <% elsif list.month.bulan == "Desember" %>
+       <td><%=  "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" rescue nil %></td>
+  <% end %>
+  

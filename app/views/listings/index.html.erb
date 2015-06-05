@@ -25,22 +25,12 @@
       <tbody>
         <% @listings_by_donatur.each do |donatur, listing| %>
         <tr>
-          <td><%= link_to donatur, listings_path(@listing) %></td>
+          <td><%= donatur %></td>
+          <%#= "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" %>
           <% listing.each do |list| %>
-              <%#= "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" %>
-              <td><%= "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" if list.month.bulan == "Januari"%></td>
-              <td><%= "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" if list.month.bulan == "Februari"%></td>
-              <td><%= "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" if list.month.bulan == "Maret"%></td>
-              <td><%= "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" if list.month.bulan == "April"%></td>
-              <td><%= "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" if list.month.bulan == "Mei"%></td>
-              <td><%= "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" if list.month.bulan == "Juni"%></td>
-              <td><%= "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" if list.month.bulan == "Juli"%></td>
-              <td><%= "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" if list.month.bulan == "Agustus"%></td>
-              <td><%= "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" if list.month.bulan == "September"%></td>
-              <td><%= "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" if list.month.bulan == "Oktober"%></td>
-              <td><%= "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" if list.month.bulan == "November"%></td>
-              <td><%= "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" if list.month.bulan == "Desember"%></td>
-          <% end %>  
+          <td><%= list.month.bulan %></td>
+          <% end %>
+
         </tr>
         <% end %>
       </tbody>
