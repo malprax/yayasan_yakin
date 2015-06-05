@@ -1,14 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Amount:</strong>
-  <%= @listing.amount %>
-</p>
+  <p>
+    <strong>Amount:</strong>
+    <%= @listing.amount %>
+  </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @listing.user_id %>
-</p>
+  <p>
+    <strong>User:</strong>
+    <%= @listing.donatur.name%>
+  </p>
 
-<%= link_to 'Edit', edit_listing_path(@listing) %> |
-<%= link_to 'Back', listings_path %>
+  <%= link_to 'Edit', edit_listing_path(@listing) %> |
+  <%= link_to 'Back', listings_path %>
+  
+</div>

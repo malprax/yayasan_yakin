@@ -13,11 +13,12 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all
+    @listings = Listing.order('urut asc')
     @donaturs = Donatur.all
     @years = Year.all
-    # @months = Month.all
-    # @month = @year.months.order('created_at')
+    @months = Month.all
+    @listings_by_donatur = @listings.group_by {|list| list.donatur.name}
+    #@month = @year.months.order('created_at')
   end
 
   # GET /listings/1

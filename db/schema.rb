@@ -11,24 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529032705) do
+ActiveRecord::Schema.define(version: 20150605071734) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "attendance_sheets", force: :cascade do |t|
-    t.integer  "course_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "attendance_sheets", ["course_id"], name: "index_attendance_sheets_on_course_id", using: :btree
-
-  create_table "courses", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "donaturs", force: :cascade do |t|
     t.string   "name"
@@ -37,24 +23,13 @@ ActiveRecord::Schema.define(version: 20150529032705) do
   end
 
   create_table "listings", force: :cascade do |t|
-    t.string   "amount"
+    t.decimal  "amount"
     t.integer  "year_id"
     t.integer  "month_id"
     t.integer  "donatur_id"
-    t.decimal  "januari"
-    t.decimal  "februari"
-    t.decimal  "maret"
-    t.decimal  "april"
-    t.decimal  "mei"
-    t.decimal  "juni"
-    t.decimal  "juli"
-    t.decimal  "agustus"
-    t.decimal  "september"
-    t.decimal  "oktober"
-    t.decimal  "november"
-    t.decimal  "desember"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "urut"
   end
 
   create_table "months", force: :cascade do |t|
@@ -90,5 +65,4 @@ ActiveRecord::Schema.define(version: 20150529032705) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "attendance_sheets", "courses"
 end
