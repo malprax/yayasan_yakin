@@ -4,44 +4,41 @@
 
   <div class="col-md-12">
     <p id="notice"><%= notice %></p>
+    <% unless @listings.blank? %>
     <table class="table table-hover table-condensed">
       <thead>
-        <tr>
-          <th>Donatur</th>
-          <th>Januari</th>
-          <th>Februari</th>
-          <th>Maret</th>
-          <th>April</th>
-          <th>Mei</th>
-          <th>Juni</th>
-          <th>Juli</th>
-          <th>Agustus</th>
-          <th>September</th>
-          <th>Oktober</th>
-          <th>November</th>
-          <th>Desember</th>
-        </tr>
+            <tr>
+                  <th>Donatur</th>
+                  <th>Januari</th>
+                  <th>Februari</th>
+                  <th>Maret</th>
+                  <th>April</th>
+                  <th>Mei</th>
+                  <th>Juni</th>
+                  <th>Juli</th>
+                  <th>Agustus</th>
+                  <th>September</th>
+                  <th>Oktober</th>
+                  <th>November</th>
+                  <th>Desember</th>
+            </tr>
       </thead>
       <tbody>
-        <% @listings_by_donatur.each do |donatur, listing| %>
-        <tr>
-              <td><%= donatur %></td>
-              <%#= "#{number_to_currency(list.amount, precision: 0, unit:"Rp ")}" %>
-          <%listing.each do |list| %>
-              <td>
-                  <%#= listing %>
-                  <%= list.month.id %>
-              </td>
-                       
-          <% end %>
-
-        </tr>
-        <% end %>
+            <% @listings_by_donatur.each do |donatur, listing| %>
+            <tr>
+                  <td><%= donatur  %></td>
+              <% listing.each do |list| %>
+                  <td>
+                      <%= link_to list.id, list, id: "list" %>
+                      <%= "#{number_to_currency(list.amount, precision: 0, unit: "Rp ")}" %>
+                  </td>                   
+              <% end %>
+            </tr>
+            <% end %>
       </tbody>
-
-    </table>    
-  </div>
-  <%= link_to 'Tambah Iuran', new_listing_path %>
+    </table> 
+    <% end %> 
+  </div> 
 </div>
 
 

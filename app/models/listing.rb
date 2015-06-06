@@ -3,6 +3,7 @@ class Listing < ActiveRecord::Base
   belongs_to :donatur
   belongs_to :year
   belongs_to :month
+  validates_presence_of :donatur
   # has_many :months, through: :years
   
   def set_urut
