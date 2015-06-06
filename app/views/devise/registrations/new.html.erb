@@ -1,29 +1,50 @@
-<h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+<div class="row">
+  <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-8 col-md-6">
+    <h3 class="lead">Daftar Baru</h3>
+    <hr>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="col-sm-12">
+    <%= form_for(resource, as:resource_name, url: registration_path(resource_name), :html => { class:"form-horizontal", role:"form"}) do |f| %>
+        <%= devise_error_messages! %>
+      <div class="form-group">
+        <%= f.label :email, for: "inputText3", class:" col-xs-offset-1 col-xs-2 col-sm-3 col-md-3 control-label weight" %>
+        <div class=" col-xs-8 col-sm-6 col-md-4">
+          <%= f.email_field :email, class: "form-control weight", id:"inputText3" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :password, for: "inputText3", class:"col-xs-offset-1 col-xs-2 col-sm-3 col-md-3 col-md-3 control-label weight "   %>
+        <div class="col-xs-8 col-sm-6 col-md-4">
+          <%= f.password_field :password, autocomplete: 'off', class: "form-control weight", id:"inputPassword3"%>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :password_confirmation, for: "inputText3", class:"col-xs-offset-1 col-xs-2 col-sm-3 col-md-3 col-md-3 control-label weight "   %>
+        <div class="col-xs-8 col-sm-6 col-md-4">
+          <%= f.password_field :password_confirmation, autocomplete: 'off', class: "form-control weight", id:"inputPassword3"%>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <div class="col-xs-offset-3 col-sm-offset-4 col-sm-3 col-md-3">
+          <%= f.submit "Sign Up", class: "btn btn-success" %>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="col-xs-offset-3 col-sm-offset-4 col-sm-3 col-md-3 ">
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+      
+      
+    <% end %>  
   </div>
+  
+</div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+

@@ -2,10 +2,11 @@ Rails.application.routes.draw do
   resources :donaturs
 
   devise_for :users
-  resources :listings
+  resources :listings, only:[:legalitas, :struktur, :beranda, :tabel, :new, :create, :index, :edit, :update]
   get 'legalitas' => 'listings#legalitas'
   get 'struktur' => 'listings#struktur'
   get 'beranda' => 'listings#beranda'
+  get 'tabel' => 'listings#tabel'
   # get 'donatur' => 'd#index'
   
 

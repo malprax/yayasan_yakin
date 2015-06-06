@@ -1,10 +1,21 @@
 class ListingsController < ApplicationController
+  before_action :authenticate_user!, except: [:beranda, :legalitas, :tabel, :struktur]
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
   def beranda
     
   end
   def legalitas
     
+  end
+  
+  def tabel
+    @listing = Listing.find_by(params[:donatur_id])
+    @listings = Listing.order('urut asc')
+    @donaturs = Donatur.all
+    @years = Year.all
+    @year = Year.find_by(params[:id])
+    @months = Month.all
+    @listings_by_donatur = @listings.group_by {|list| list.donatur.name }
   end
   
   def struktur
