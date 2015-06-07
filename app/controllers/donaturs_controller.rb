@@ -5,7 +5,7 @@ class DonatursController < ApplicationController
   # GET /donaturs
   # GET /donaturs.json
   def index
-    @donaturs = Donatur.all
+    @donaturs = Donatur.order('created_at asc')
   end
 
   # GET /donaturs/1
