@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: months
+#
+#  id         :integer          not null, primary key
+#  bulan      :string
+#  year_id    :integer
+#  urut       :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Month < ActiveRecord::Base
   belongs_to :year
   has_many :listings, through: :years, dependent: :destroy

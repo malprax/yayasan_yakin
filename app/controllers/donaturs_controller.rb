@@ -65,7 +65,7 @@ class DonatursController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_donatur
-      @donatur = Donatur.find(params[:id])
+      @donatur = Donatur.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
