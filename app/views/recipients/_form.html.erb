@@ -1,0 +1,89 @@
+<%= form_for(@recipient) do |f| %>
+  <% if @recipient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recipient.errors.count, "error") %> prohibited this recipient from being saved:</h2>
+
+      <ul>
+      <% @recipient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :nik %><br>
+    <%= f.text_field :nik %>
+  </div>
+  <div class="field">
+    <%= f.label :born_place %><br>
+    <%= f.text_field :born_place %>
+  </div>
+  <div class="field">
+    <%= f.label :born_date %><br>
+    <%= f.text_field :born_date %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :blood_type %><br>
+    <%= f.text_field :blood_type %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :rukun_tetangga %><br>
+    <%= f.text_field :rukun_tetangga %>
+  </div>
+  <div class="field">
+    <%= f.label :rukun_warga %><br>
+    <%= f.text_field :rukun_warga %>
+  </div>
+  <div class="field">
+    <%= f.label :kelurahan %><br>
+    <%= f.text_field :kelurahan %>
+  </div>
+  <div class="field">
+    <%= f.label :kecamatan %><br>
+    <%= f.text_field :kecamatan %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :religion %><br>
+    <%= f.text_field :religion %>
+  </div>
+  <div class="field">
+    <%= f.label :marital_status %><br>
+    <%= f.text_field :marital_status %>
+  </div>
+  <div class="field">
+    <%= f.label :job %><br>
+    <%= f.text_field :job %>
+  </div>
+  <div class="field">
+    <%= f.label :nationality %><br>
+    <%= f.text_field :nationality %>
+  </div>
+  <div class="field">
+    <%= f.label :pos_code %><br>
+    <%= f.text_field :pos_code %>
+  </div>
+  <div class="field">
+    <%= f.label :province %><br>
+    <%= f.text_field :province %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

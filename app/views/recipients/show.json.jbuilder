@@ -1,0 +1,1 @@
+json.extract! @recipient, :id, :name, :nik, :born_place, :born_date, :gender, :blood_type, :address, :rukun_tetangga, :rukun_warga, :kelurahan, :kecamatan, :city, :religion, :marital_status, :job, :nationality, :pos_code, :province, :created_at, :updated_at

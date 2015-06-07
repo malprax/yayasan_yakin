@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150605071734) do
+ActiveRecord::Schema.define(version: 20150607043515) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,29 @@ ActiveRecord::Schema.define(version: 20150605071734) do
     t.integer  "urut"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "recipients", force: :cascade do |t|
+    t.string   "name"
+    t.string   "nik"
+    t.string   "born_place"
+    t.string   "born_date"
+    t.string   "gender"
+    t.string   "blood_type"
+    t.string   "address"
+    t.string   "rukun_tetangga"
+    t.string   "rukun_warga"
+    t.string   "kelurahan"
+    t.string   "kecamatan"
+    t.string   "city"
+    t.string   "religion"
+    t.string   "marital_status"
+    t.string   "job"
+    t.string   "nationality"
+    t.string   "pos_code"
+    t.string   "province"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "users", force: :cascade do |t|

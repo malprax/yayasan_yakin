@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   get 'struktur' => 'listings#struktur'
   get 'beranda' => 'listings#beranda'
   get 'tabel' => 'listings#tabel'
+  
+  resources :recipients
+  get 'santunan' => 'recipients#santunan'
   # get 'donatur' => 'd#index'
   
-
-
-
   resources :years do
       resources :months
   end
