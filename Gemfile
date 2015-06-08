@@ -56,6 +56,9 @@ gem 'friendly_id'
 #nice_date
 gem 'bootstrap-datepicker-rails'
 
+#chart organization gem
+gem 'google_visualr'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
