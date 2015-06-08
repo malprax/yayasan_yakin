@@ -50,6 +50,10 @@ gem 'annotate', github: 'ctran/annotate_models'
 #friendly url
 gem 'friendly_id'
 
+#nice_date
+gem 'bootstrap-datepicker-rails'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
