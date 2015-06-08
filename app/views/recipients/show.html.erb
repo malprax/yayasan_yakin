@@ -7,45 +7,46 @@
     <table class="table">
     
       <tbody>  
+          
           <tr>
-            <td>Hari</td>
-            <td><%= @recipient.hari.camelize %></td>
+            <td>Nama</td>
+            <td><%= @recipient.name %></td>
+          </tr>
+          
+          <tr>
+            <td>Nomor Kartu Tanda Penduduk</td>
+            <td><%= @recipient.nik %></td>
           </tr>
           <tr>
-            <td>Waktu</td>
-            <td><%= @recipient.waktu %></td>
-          </tr>         
-          <tr>
-            <td>Mata Kuliah</td>
-            <td><%= @recipient.course.name.upcase %></td>
+            <td>Tempat, Tanggal Lahir</td>
+            <td><%= @recipient.lahir %></td>
           </tr>
           <tr>
-            <td>SKS</td>
-            <td><%= @recipient.course.credit %></td>
+            <td>Alamat Lengkap</td>
+            <td><%= @recipient.alamat_lengkap %></td>
           </tr>
           <tr>
-            <td>Kode</td>
-            <td><%= @recipient.course.code.upcase %></td>
+            <td>Agama</td>
+            <td><%= @recipient.religion %></td>
           </tr>
           <tr>
-            <td>Kelas</td>
-            <td><%= @recipient.kelas.upcase %></td>
+            <td>Status Perkawinan</td>
+            <td><%= @recipient.marital_status %></td>
           </tr>
-          <% if @recipient.lecture_1 && @recipient.lecture_2 %>
           <tr>
-            <td>Dosen</td>
-            <td><%= @recipient.dosen_gabungan %></td>
+            <td>Propinsi</td>
+            <td><%= @recipient.pos_code %></td>
           </tr>
-          <% else %>
           <tr>
-            <td>Dosen</td>
-            <td><%= @recipient.lecture_1.name %></td>
+            <td>Propinsi</td>
+            <td><%= @recipient.province %></td>
           </tr>
-          <% end %>
           <tr>
-            <td>Ruangan</td>
-            <td><%= @recipient.ruangan.camelize %></td>
+            <td>Negara</td>
+            <td><%= @recipient.nationality %></td>
           </tr>
+          
+          
       </tbody>
     </table>
   
@@ -58,98 +59,3 @@
   </div>
 </div>
 
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @recipient.name %>
-</p>
-
-<p>
-  <strong>Nik:</strong>
-  <%= @recipient.nik %>
-</p>
-
-<p>
-  <strong>Born place:</strong>
-  <%= @recipient.born_place %>
-</p>
-
-<p>
-  <strong>Born date:</strong>
-  <%= @recipient.born_date %>
-</p>
-
-<p>
-  <strong>Gender:</strong>
-  <%= @recipient.gender %>
-</p>
-
-<p>
-  <strong>Blood type:</strong>
-  <%= @recipient.blood_type %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @recipient.address %>
-</p>
-
-<p>
-  <strong>Rukun tetangga:</strong>
-  <%= @recipient.rukun_tetangga %>
-</p>
-
-<p>
-  <strong>Rukun warga:</strong>
-  <%= @recipient.rukun_warga %>
-</p>
-
-<p>
-  <strong>Kelurahan:</strong>
-  <%= @recipient.kelurahan %>
-</p>
-
-<p>
-  <strong>Kecamatan:</strong>
-  <%= @recipient.kecamatan %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @recipient.city %>
-</p>
-
-<p>
-  <strong>Religion:</strong>
-  <%= @recipient.religion %>
-</p>
-
-<p>
-  <strong>Marital status:</strong>
-  <%= @recipient.marital_status %>
-</p>
-
-<p>
-  <strong>Job:</strong>
-  <%= @recipient.job %>
-</p>
-
-<p>
-  <strong>Nationality:</strong>
-  <%= @recipient.nationality %>
-</p>
-
-<p>
-  <strong>Pos code:</strong>
-  <%= @recipient.pos_code %>
-</p>
-
-<p>
-  <strong>Province:</strong>
-  <%= @recipient.province %>
-</p>
-
-<%= link_to 'Edit', edit_recipient_path(@recipient) %> |
-<%= link_to 'Back', recipients_path %>
