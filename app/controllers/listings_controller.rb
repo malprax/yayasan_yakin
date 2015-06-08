@@ -24,11 +24,14 @@ class ListingsController < ApplicationController
     data_table.new_column('string', 'Manager')
     data_table.new_column('string', 'ToolTip')
     data_table.add_rows( [
-      [ {:v => 'Sulaeman', :f => 'Sulaeman<div style="color:red; font-style:italic">Ketua Yayasan</div>'   }, ''    , 'Ketua Yayasan' ],
-      [ {:v => 'Drs. H. Muchtar Abd. Rahim' , :f => 'Drs. H. Muchtar Abd. Rahim<div style="color:red; font-style:italic">Sekertaris<div>'}, 'Sulaeman', 'Sekertaris'            ],
-      [ {:v => 'Aulia Sabril' , :f => '<div style="font-size: 14px">Aulia Sabril</div><div style="color:red; font-style:italic">Bendahara<div>'}, 'Sulaeman', 'Bendahara'           ],
-      [ 'Bob'    , 'Drs. H. Muchtar Abd. Rahim' , 'Bob Sponge' ],
-      [ 'Carol'  , 'Bob' , ''           ]
+      [ {:v => 'Yayasan' , :f => '<h5>Yayasan Yakin</h5>'}, '', 'Yayasan'           ],
+      [ {:v => 'Hj. Saripa, S.Pdi' , :f => '<h5>Hj. Saripa, S.Pdi</h5><div class="jabatan">Pembina<div>'}, 'Yayasan', 'Pembina'           ],
+      [ {:v => 'Sulaeman', :f => '<h5>Sulaeman</h5><div class="jabatan">Ketua Yayasan</div>'   }, 'Yayasan'    , 'Ketua Yayasan' ],
+      [ {:v => 'M. Hanan Sulaeman' , :f => '<h5>M. Hanan Sulaeman</h5><div class="jabatan">Sekertaris<div>'}, 'Sulaeman', 'Sekertaris'            ],
+      [ {:v => 'Aulia Sabril' , :f => '<h5>Aulia Sabril</h5><div class="jabatan">Bendahara<div>'}, 'Sulaeman', 'Bendahara'           ],
+      [ {:v => 'Drs. H. Muchtar Abd. Rahim' , :f => '<h5>Drs. H. Muchtar A Rahim</h5><div class="jabatan">Pengawas<div>'}, 'Yayasan', 'Pengawas'            ],
+      # [ 'Bob'    , 'Drs. H. Muchtar Abd. Rahim' , 'Bob Sponge' ],
+      # [ 'Carol'  , 'Bob' , ''           ]
     ] )
     opts   = { :allowHtml => true }
     @chart = GoogleVisualr::Interactive::OrgChart.new(data_table, opts)
