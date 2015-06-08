@@ -19,8 +19,21 @@ class ListingsController < ApplicationController
   end
   
   def struktur
-    
+    data_table = GoogleVisualr::DataTable.new
+    data_table.new_column('string', 'Name'   )
+    data_table.new_column('string', 'Manager')
+    data_table.new_column('string', 'ToolTip')
+    data_table.add_rows( [
+      [ {:v => 'Sulaeman', :f => 'Sulaeman<div style="color:red; font-style:italic">Ketua Yayasan</div>'   }, ''    , 'Ketua Yayasan' ],
+      [ {:v => 'Drs. H. Muchtar Abd. Rahim' , :f => 'Drs. H. Muchtar Abd. Rahim<div style="color:red; font-style:italic">Sekertaris<div>'}, 'Sulaeman', 'Sekertaris'            ],
+      [ {:v => 'Aulia Sabril' , :f => '<div style="font-size: 14px">Aulia Sabril</div><div style="color:red; font-style:italic">Bendahara<div>'}, 'Sulaeman', 'Bendahara'           ],
+      [ 'Bob'    , 'Drs. H. Muchtar Abd. Rahim' , 'Bob Sponge' ],
+      [ 'Carol'  , 'Bob' , ''           ]
+    ] )
+    opts   = { :allowHtml => true }
+    @chart = GoogleVisualr::Interactive::OrgChart.new(data_table, opts)
   end
+  
   # GET /listings
   # GET /listings.json
   def index

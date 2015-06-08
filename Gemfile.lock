@@ -192,7 +192,7 @@ DEPENDENCIES
   devise
   figaro
   friendly_id
-  google_visualr
+  google_visualr (>= 2.1)
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks

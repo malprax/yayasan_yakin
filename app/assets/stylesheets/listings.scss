@@ -9,3 +9,13 @@
 .center{
   text-align: center;
 }
+
+#chart_div > .table{
+  border-collapse: separate !important;
+}
+
+.google-visualization-orgchart-table {
+  border: 0;
+  text-align: center;
+  border-collapse: separate;
+}

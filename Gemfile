@@ -57,7 +57,7 @@ gem 'friendly_id'
 gem 'bootstrap-datepicker-rails'
 
 #chart organization gem
-gem 'google_visualr'
+gem 'google_visualr', ">= 2.1"
 
 
 # Use ActiveModel has_secure_password
