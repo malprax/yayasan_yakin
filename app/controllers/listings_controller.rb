@@ -10,7 +10,7 @@ class ListingsController < ApplicationController
   
   def tabel
     @listing = Listing.find_by(params[:donatur_id])
-    @listings = Listing.order('urut asc')
+    @listings = Listing.order('created_at asc')
     @donaturs = Donatur.order('created_at asc')
     @years = Year.all
     @year = Year.find_by(params[:id])
