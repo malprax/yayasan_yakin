@@ -1,23 +1,20 @@
 # == Schema Information
 #
-# Table name: months
+# Table name: recipient_cards
 #
-#  id         :integer          not null, primary key
-#  bulan      :string
-#  year_id    :integer
-#  urut       :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id           :integer          not null, primary key
+#  month        :string
+#  amount       :string
+#  donatur      :string
+#  receiver     :string
+#  urut         :integer
+#  recipient_id :integer
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
 #
 
-class Month < ActiveRecord::Base
-  belongs_to :year
-  has_many :listings, through: :years, dependent: :destroy
-  before_create :set_urut
-  
-  # def sudah_ada_bulan
-#     Month.pluck(:bulan).to_s
-#   end
+class RecipientCard < ActiveRecord::Base
+  belongs_to :recipient
   def set_urut
       if self.bulan == 'Januari'
         self.urut = 1
@@ -45,5 +42,5 @@ class Month < ActiveRecord::Base
         self.urut = 12
       end
   end
-
+  
 end

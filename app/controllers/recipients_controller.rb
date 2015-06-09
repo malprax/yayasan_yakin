@@ -1,4 +1,5 @@
 class RecipientsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show, :santunan]
   before_action :set_recipient, only: [:show, :edit, :update, :destroy]
   
   def santunan
@@ -68,7 +69,7 @@ class RecipientsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recipient
-      @recipient = Recipient.find(params[:id])
+      @recipient = Recipient.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

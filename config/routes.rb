@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :recipient_cards
+
   resources :donaturs
 
   devise_for :users

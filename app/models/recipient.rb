@@ -23,9 +23,17 @@
 #  province       :string
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  slug           :string
 #
 
 class Recipient < ActiveRecord::Base
+  has_many :recipient_cards, dependent: :destroy
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+  def should_generate_new_friendly_id?
+    name_changed? || super
+  end
+  
   def alamat_lengkap
     "#{address}, RT #{rukun_tetangga}/RW #{rukun_warga}, Kelurahan #{kelurahan}, Kecamatan #{kecamatan}, #{province}, #{pos_code}"
   end

@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: recipient_cards
+#
+#  id           :integer          not null, primary key
+#  month        :string
+#  amount       :string
+#  donatur      :string
+#  receiver     :string
+#  urut         :integer
+#  recipient_id :integer
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  month: MyString
+  amount: MyString
+  donatur: MyString
+  receiver: MyString
+  urut: 1
+  recipient_id: 
+
+two:
+  month: MyString
+  amount: MyString
+  donatur: MyString
+  receiver: MyString
+  urut: 1
+  recipient_id: 

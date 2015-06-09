@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @recipient_card.month %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @recipient_card.amount %>
+</p>
+
+<p>
+  <strong>Donatur:</strong>
+  <%= @recipient_card.donatur %>
+</p>
+
+<p>
+  <strong>Receiver:</strong>
+  <%= @recipient_card.receiver %>
+</p>
+
+<p>
+  <strong>Urut:</strong>
+  <%= @recipient_card.urut %>
+</p>
+
+<p>
+  <strong>Recipient:</strong>
+  <%= @recipient_card.recipient %>
+</p>
+
+<%= link_to 'Edit', edit_recipient_card_path(@recipient_card) %> |
+<%= link_to 'Back', recipient_cards_path %>

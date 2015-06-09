@@ -1,0 +1,41 @@
+<%= form_for(@recipient_card) do |f| %>
+  <% if @recipient_card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recipient_card.errors.count, "error") %> prohibited this recipient_card from being saved:</h2>
+
+      <ul>
+      <% @recipient_card.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :month %><br>
+    <%= f.text_field :month %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br>
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :donatur %><br>
+    <%= f.text_field :donatur %>
+  </div>
+  <div class="field">
+    <%= f.label :receiver %><br>
+    <%= f.text_field :receiver %>
+  </div>
+  <div class="field">
+    <%= f.label :urut %><br>
+    <%= f.number_field :urut %>
+  </div>
+  <div class="field">
+    <%= f.label :recipient_id %><br>
+    <%= f.text_field :recipient_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

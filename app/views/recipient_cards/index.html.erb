@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Recipient Cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Amount</th>
+      <th>Donatur</th>
+      <th>Receiver</th>
+      <th>Urut</th>
+      <th>Recipient</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recipient_cards.each do |recipient_card| %>
+      <tr>
+        <td><%= recipient_card.month %></td>
+        <td><%= recipient_card.amount %></td>
+        <td><%= recipient_card.donatur %></td>
+        <td><%= recipient_card.receiver %></td>
+        <td><%= recipient_card.urut %></td>
+        <td><%= recipient_card.recipient %></td>
+        <td><%= link_to 'Show', recipient_card %></td>
+        <td><%= link_to 'Edit', edit_recipient_card_path(recipient_card) %></td>
+        <td><%= link_to 'Destroy', recipient_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recipient card', new_recipient_card_path %>
