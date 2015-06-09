@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   resources :donaturs
 
   devise_for :users
@@ -10,7 +12,7 @@ Rails.application.routes.draw do
   
   resources :recipients do
     get 'santunan' => 'recipients#santunan', as: :santunan 
-    resources :recipient_cards
+    resources :cards
   end
     
   # get 'donatur' => 'd#index'

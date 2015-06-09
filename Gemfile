@@ -59,6 +59,10 @@ gem 'bootstrap-datepicker-rails'
 #chart organization gem
 gem 'google_visualr', ">= 2.1"
 
+#nested_form
+gem "nested_form"
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

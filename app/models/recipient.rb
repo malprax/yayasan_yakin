@@ -27,9 +27,10 @@
 #
 
 class Recipient < ActiveRecord::Base
-  has_one :recipient_cards, dependent: :destroy
-  accepts_nested_attributes_for :recipient_cards, allow_destroy: true
   extend FriendlyId
+  has_one :card, dependent: :destroy
+  accepts_nested_attributes_for :card, allow_destroy: true
+
   friendly_id :name, use: :slugged
   def should_generate_new_friendly_id?
     name_changed? || super

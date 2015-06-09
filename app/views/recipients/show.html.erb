@@ -51,9 +51,9 @@
     </table>
   
     <div class="panel-footer">
-      <% if signed_in? %>
-          <%= link_to 'Edit', edit_recipient_path(@recipient), class:"btn btn-default" %> 
-      <% end %>
+      <%# if signed_in? %>
+          <%#= link_to 'Edit', edit_recipient_path(@recipient), class:"btn btn-default" %> 
+      <%# end %>
       <%#= link_to 'Kembali', santunan_path, class:"btn btn-primary" %>
     </div>
   </div>
@@ -72,22 +72,23 @@
             <td>No</td>
             <td>Bulan</td>
             <td>Jumlah</td>
-            <td>Penerima</td>
+            <td>Petugas</td>
           </tr>
       </thead>
       <tbody>  
-        <% @recipient_cards.each do |recive| %>
+
           <tr>
-            <td>No</td>
-            <td><%= recive.month %></td>
-            <td><%= recive.amount %></td>
-            <td><%= recive.employee %></td>
+            <td></td>
+            <td><%= @card.month rescue nil %></td>
+            <td><%= @card.amount rescue nil %></td>
+            <td><%= @card.employee rescue nil %></td>
           </tr> 
-        <% end %>         
+       
       </tbody>
     </table>
   
     <div class="panel-footer">
+      <%= link_to 'Buat Bukti Penyaluran', new_recipient_card_path(@recipient) %>
       <%# if signed_in? %>
           <%#= link_to 'Edit', edit_recipient_path(@recipient), class:"btn btn-default" %> 
       <%# end %>

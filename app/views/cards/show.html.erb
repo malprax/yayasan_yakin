@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @card.month %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @card.amount %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @card.employee %>
+</p>
+
+<p>
+  <strong>Urut:</strong>
+  <%= @card.urut %>
+</p>
+
+<p>
+  <strong>Recipient:</strong>
+  <%= @card.recipient_id %>
+</p>
+
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Back', cards_path %>

@@ -4,7 +4,7 @@ class RecipientsController < ApplicationController
   
   def santunan
     @recipients = Recipient.order('created_at asc')
-    @recipient_cards = RecipientCard.all
+    @cards = Card.all
   end
   
   # GET /recipients
@@ -16,12 +16,13 @@ class RecipientsController < ApplicationController
   # GET /recipients/1
   # GET /recipients/1.json
   def show
-    @recipient_cards = RecipientCard.all
+    @card = @recipient.card.order('created_at') rescue nil
   end
 
   # GET /recipients/new
   def new
     @recipient = Recipient.new
+    @card = @recipient.cards.build
   end
 
   # GET /recipients/1/edit
@@ -35,7 +36,7 @@ class RecipientsController < ApplicationController
 
     respond_to do |format|
       if @recipient.save
-        format.html { redirect_to santunan_path, notice: 'Recipient was successfully created.' }
+        format.html { redirect_to recipients_path, notice: 'Recipient was successfully created.' }
         format.json { render :show, status: :created, location: @recipient }
       else
         format.html { render :new }
@@ -49,7 +50,7 @@ class RecipientsController < ApplicationController
   def update
     respond_to do |format|
       if @recipient.update(recipient_params)
-        format.html { redirect_to santunan_path, notice: 'Recipient was successfully updated.' }
+        format.html { redirect_to recipients_path, notice: 'Recipient was successfully updated.' }
         format.json { render :show, status: :ok, location: @recipient }
       else
         format.html { render :edit }
@@ -76,6 +77,8 @@ class RecipientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipient_params
-      params.require(:recipient).permit(:name, :nik, :born_place, :born_date, :gender, :blood_type, :address, :rukun_tetangga, :rukun_warga, :kelurahan, :kecamatan, :city, :religion, :marital_status, :job, :nationality, :pos_code, :province)
+      params.require(:recipient).permit(:name, :nik, :born_place, :born_date, :gender, :blood_type, :address, 
+      :rukun_tetangga, :rukun_warga, :kelurahan, :kecamatan, :city, :religion, :marital_status, :job, :nationality, :pos_code, :province,
+      :cards_attributes => [:recipient_id, :id, :employee, :amount, :month, :urut])
     end
 end

@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150609140324) do
+ActiveRecord::Schema.define(version: 20150609215740) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cards", force: :cascade do |t|
+    t.string   "month"
+    t.decimal  "amount"
+    t.string   "employee"
+    t.integer  "urut"
+    t.integer  "recipient_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "donaturs", force: :cascade do |t|
     t.string   "name"
@@ -55,18 +65,6 @@ ActiveRecord::Schema.define(version: 20150609140324) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  create_table "recipient_cards", force: :cascade do |t|
-    t.string   "month"
-    t.string   "amount"
-    t.string   "employee"
-    t.integer  "urut"
-    t.integer  "recipient_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  add_index "recipient_cards", ["recipient_id"], name: "index_recipient_cards_on_recipient_id", using: :btree
 
   create_table "recipients", force: :cascade do |t|
     t.string   "name"
@@ -117,5 +115,4 @@ ActiveRecord::Schema.define(version: 20150609140324) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "recipient_cards", "recipients"
 end
