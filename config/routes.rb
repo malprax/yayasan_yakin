@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :recipient_cards
-
   resources :donaturs
 
   devise_for :users
@@ -10,8 +8,11 @@ Rails.application.routes.draw do
   get 'beranda' => 'listings#beranda'
   get 'tabel' => 'listings#tabel'
   
-  resources :recipients
-  get 'santunan' => 'recipients#santunan'
+  resources :recipients do
+    get 'santunan' => 'recipients#santunan', as: :santunan 
+    resources :recipient_cards
+  end
+    
   # get 'donatur' => 'd#index'
   
   resources :years do

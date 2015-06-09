@@ -59,8 +59,7 @@ ActiveRecord::Schema.define(version: 20150609140324) do
   create_table "recipient_cards", force: :cascade do |t|
     t.string   "month"
     t.string   "amount"
-    t.string   "donatur"
-    t.string   "receiver"
+    t.string   "employee"
     t.integer  "urut"
     t.integer  "recipient_id"
     t.datetime "created_at",   null: false

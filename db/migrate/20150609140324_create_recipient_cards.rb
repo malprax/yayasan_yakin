@@ -3,8 +3,7 @@ class CreateRecipientCards < ActiveRecord::Migration
     create_table :recipient_cards do |t|
       t.string :month
       t.string :amount
-      t.string :donatur
-      t.string :receiver
+      t.string :employee
       t.integer :urut
       t.references :recipient, index: true
 

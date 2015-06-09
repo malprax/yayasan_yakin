@@ -15,6 +15,7 @@
 
 class RecipientCard < ActiveRecord::Base
   belongs_to :recipient
+  before_create :set_urut
   def set_urut
       if self.bulan == 'Januari'
         self.urut = 1

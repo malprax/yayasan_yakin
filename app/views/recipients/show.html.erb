@@ -54,7 +54,44 @@
       <% if signed_in? %>
           <%= link_to 'Edit', edit_recipient_path(@recipient), class:"btn btn-default" %> 
       <% end %>
-      <%= link_to 'Kembali', santunan_path, class:"btn btn-primary" %>
+      <%#= link_to 'Kembali', santunan_path, class:"btn btn-primary" %>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-xs-12 col-sm-4 col-md-4">
+  <div class="panel panel-success">
+    <!-- Default panel contents -->
+    <div class="panel-heading"></div>
+  
+    <!-- Table -->
+    <table class="table">
+      <thead>
+          <tr>
+            <td>No</td>
+            <td>Bulan</td>
+            <td>Jumlah</td>
+            <td>Penerima</td>
+          </tr>
+      </thead>
+      <tbody>  
+        <% @recipient_cards.each do |recive| %>
+          <tr>
+            <td>No</td>
+            <td><%= recive.month %></td>
+            <td><%= recive.amount %></td>
+            <td><%= recive.employee %></td>
+          </tr> 
+        <% end %>         
+      </tbody>
+    </table>
+  
+    <div class="panel-footer">
+      <%# if signed_in? %>
+          <%#= link_to 'Edit', edit_recipient_path(@recipient), class:"btn btn-default" %> 
+      <%# end %>
+      <%#= link_to 'Kembali', santunan_path, class:"btn btn-primary" %>
     </div>
   </div>
 </div>

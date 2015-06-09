@@ -4,6 +4,7 @@ class RecipientsController < ApplicationController
   
   def santunan
     @recipients = Recipient.order('created_at asc')
+    @recipient_cards = RecipientCard.all
   end
   
   # GET /recipients
@@ -15,6 +16,7 @@ class RecipientsController < ApplicationController
   # GET /recipients/1
   # GET /recipients/1.json
   def show
+    @recipient_cards = RecipientCard.all
   end
 
   # GET /recipients/new
