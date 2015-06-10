@@ -58,3 +58,5 @@ Logo Dan Icon
 Jurnal Kas
 Photo Kondisi Rumah Dan Santunan
 Perbaiki sekuriti devise sebelum deploy
+halaman beranda
+
