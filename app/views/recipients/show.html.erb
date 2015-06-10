@@ -4,7 +4,7 @@
     <div class="panel-heading"></div>
   
     <!-- Table -->
-    <table class="table">
+    <table class="table table-condensed">
     
       <tbody>  
           
@@ -66,34 +66,48 @@
     <div class="panel-heading"></div>
   
     <!-- Table -->
-    <table class="table">
-      <thead>
-          <tr>
-            <td>No</td>
-            <td>Bulan</td>
-            <td>Jumlah</td>
-            <td>Petugas</td>
-          </tr>
-      </thead>
+    <table class="table table-condensed table-hover table-bordered">
       <tbody>  
-
           <tr>
-            <td></td>
-            <td><%= @card.month rescue nil %></td>
-            <td><%= @card.amount rescue nil %></td>
-            <td><%= @card.employee rescue nil %></td>
+            <td class="warnatabel center">No</td>
+            <td class="warnatabel">Bulan</td>
+            <td class="warnatabel">Tanggal</td>
+            <td class="warnatabel center">Jumlah</td>
+            <td class="warnatabel">Petugas</td>
+            <% if signed_in? %>
+            <td class="warnatabel center" colspan="2"></td>
+            <% end %>
+          </tr>
+            <% @card.each_with_index do |card, i| %>
+          <tr>
+            <td class="center"><%= i = i + 1 %></td>
+            <td><%= card.month %></td>
+            <td><%= card.date %></td>
+            <td><%= "#{number_to_currency(card.amount, precision: 0, unit: "Rp ")}" %></td>
+            <td><%= card.employee %></td>
+            <% if signed_in? %>
+            <% if card.amount || card.employee || card.date  %>
+            <td><%= link_to 'Edit', edit_recipient_card_path(@recipient, card)  %></td>
+            <% else %>
+            <td><%= link_to 'Isi', edit_recipient_card_path(@recipient, card)  %></td>
+            <% end %>
+            <% end %>
           </tr> 
-       
+        <% end %>
       </tbody>
     </table>
   
     <div class="panel-footer">
-      <%= link_to 'Buat Bukti Penyaluran', new_recipient_card_path(@recipient) %>
+      <%#= link_to 'Buat Bukti Penyaluran', edit_recipient_card_path(@recipient, @card) %>
       <%# if signed_in? %>
-          <%#= link_to 'Edit', edit_recipient_path(@recipient), class:"btn btn-default" %> 
+      <%#= unless @cards.blank? %>
+          <%#= link_to 'Edit', edit_recipient_card_path(@recipient), class:"btn btn-default" %> 
       <%# end %>
       <%#= link_to 'Kembali', santunan_path, class:"btn btn-primary" %>
     </div>
   </div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12">
+    <%= link_to 'Kembali', recipients_path %>
 </div>
 

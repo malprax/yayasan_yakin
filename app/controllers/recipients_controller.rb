@@ -10,13 +10,13 @@ class RecipientsController < ApplicationController
   # GET /recipients
   # GET /recipients.json
   def index
-    @recipients = Recipient.all
+    @recipients = Recipient.order('created_at asc')
   end
 
   # GET /recipients/1
   # GET /recipients/1.json
   def show
-    @card = @recipient.card.order('created_at') rescue nil
+    @card = @recipient.cards.order('created_at asc')
   end
 
   # GET /recipients/new
@@ -79,6 +79,6 @@ class RecipientsController < ApplicationController
     def recipient_params
       params.require(:recipient).permit(:name, :nik, :born_place, :born_date, :gender, :blood_type, :address, 
       :rukun_tetangga, :rukun_warga, :kelurahan, :kecamatan, :city, :religion, :marital_status, :job, :nationality, :pos_code, :province,
-      :cards_attributes => [:recipient_id, :id, :employee, :amount, :month, :urut])
+      :cards_attributes => [:recipient_id, :id, :employee, :amount, :month, :urut, :date])
     end
 end

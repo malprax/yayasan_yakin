@@ -28,12 +28,19 @@
 
 class Recipient < ActiveRecord::Base
   extend FriendlyId
-  has_one :card, dependent: :destroy
-  accepts_nested_attributes_for :card, allow_destroy: true
-
+  has_many :cards, dependent: :destroy
+  accepts_nested_attributes_for :cards, allow_destroy: true
+  before_create :assign_month
   friendly_id :name, use: :slugged
   def should_generate_new_friendly_id?
     name_changed? || super
+  end
+  
+  def assign_month
+    array = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November','Desember']
+    array.each do |a|
+      cards.build(month: a, :recipient_id => :id)
+    end
   end
   
   def alamat_lengkap

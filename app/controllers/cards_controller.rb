@@ -1,4 +1,5 @@
 class CardsController < ApplicationController
+  before_action :set_recipient, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_card, only: [:show, :edit, :update, :destroy]
 
   # GET /cards
@@ -14,7 +15,7 @@ class CardsController < ApplicationController
 
   # GET /cards/new
   def new
-    @card = Card.new
+    @card = @recipient.cards.build
   end
 
   # GET /cards/1/edit
@@ -24,11 +25,11 @@ class CardsController < ApplicationController
   # POST /cards
   # POST /cards.json
   def create
-    @card = Card.new(card_params)
+    @card = @recipient.cards.create(card_params)
 
     respond_to do |format|
       if @card.save
-        format.html { redirect_to @card, notice: 'Card was successfully created.' }
+        format.html { redirect_to recipient_path(@recipient), notice: 'Card was successfully created.' }
         format.json { render :show, status: :created, location: @card }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class CardsController < ApplicationController
   def update
     respond_to do |format|
       if @card.update(card_params)
-        format.html { redirect_to @card, notice: 'Card was successfully updated.' }
+        format.html { redirect_to recipient_path(@recipient), notice: 'Card was successfully updated.' }
         format.json { render :show, status: :ok, location: @card }
       else
         format.html { render :edit }
@@ -64,11 +65,16 @@ class CardsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_card
-      @card = Card.find(params[:id])
+      @cards = Card.all
+      @card = @recipient.cards.find(params[:id])
+    end
+    
+    def set_recipient
+      @recipient = Recipient.friendly.find(params[:recipient_id])  
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def card_params
-      params.require(:card).permit(:month, :amount, :employee, :urut, :recipient_id)
+      params.require(:card).permit(:month, :amount, :employee, :urut, :recipient_id, :date)
     end
 end

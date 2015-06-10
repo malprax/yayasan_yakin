@@ -1,6 +1,12 @@
-<h1>Editing Card</h1>
-
 <%= render 'form' %>
 
-<%= link_to 'Show', @card %> |
-<%= link_to 'Back', cards_path %>
+<%#= link_to 'Show', @card %> 
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <%= link_to 'Back', recipient_path(@recipient) %>
+      </div>
+  </div>
+  
+</div>
+

@@ -1,4 +1,4 @@
-<%= form_for(@card) do |f| %>
+<%= nested_form_for([@recipient, @card],  :html => { class:"form-horizontal", role:"form"}) do |f| %>
   <% if @card.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@card.errors.count, "error") %> prohibited this card from being saved:</h2>
@@ -10,28 +10,42 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :month %><br>
-    <%= f.text_field :month %>
+  <div class="form-group">
+    <%= f.label :date, "Tanggal", for: "inputText3", class:"col-sm-3 col-md-3 control-label weight" %>
+    <div class="col-sm-8 col-md-4">
+      <%= f.text_field :date, class: "datepicker form-control weight", id:"inputText3" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :amount %><br>
-    <%= f.text_field :amount %>
+  
+  <div class="form-group">
+    <%= f.label :amount, "Jumlah", for: "inputText3", class:"col-sm-3 col-md-3 control-label weight"  %>
+    <div class="col-sm-8 col-md-4">
+      <%= f.text_field :amount, class: "form-control weight", id:"inputText3", placeholder:"input jumlah dengan hanya angka saja" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :employee %><br>
-    <%= f.text_field :employee %>
+  
+  <div class="form-group">
+    <%= f.label :employee, "Petugas", for: "inputText3", class:"col-sm-3 col-md-3 control-label weight"  %>
+    <div class="col-sm-8 col-md-4">
+      <%= f.text_field :employee, class: "form-control weight", id:"inputText3", placeholder:"input petugas dengan huruf kecil" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :urut %><br>
-    <%= f.number_field :urut %>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-3 col-md-offset-3">
+       <% if action_name == 'new' %>
+           <%= f.submit "Buat Bukti Santunan", class:"btn btn-success" %>
+       <% elsif action_name == 'edit' %>
+           <% if @card.date || @card.amount || @card.employee %>
+               <%= f.submit "Edit Bukti Santunan", class:"btn btn-success" %>
+           <% else %>
+               <%= f.submit "Buat Bukti Santunan", class:"btn btn-success" %>
+           <% end %>
+       <% end %>
+       <%# action_name == "new" ? (f.submit "Buat Bukti Santunan", class:"btn btn-success"):(  f.submit "Edit Bukti Santunan", class:"btn btn-success") %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :recipient_id %><br>
-    <%= f.number_field :recipient_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
+ 
 <% end %>
+

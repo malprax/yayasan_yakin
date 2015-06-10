@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'tabel' => 'listings#tabel'
   
   resources :recipients do
-    get 'santunan' => 'recipients#santunan', as: :santunan 
+    # get 'santunan' => 'recipients#santunan', as: :santunan
     resources :cards
   end
     

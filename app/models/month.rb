@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: months
+# Table name: bulans
 #
 #  id         :integer          not null, primary key
 #  bulan      :string
@@ -16,7 +16,7 @@ class Month < ActiveRecord::Base
   before_create :set_urut
   
   # def sudah_ada_bulan
-#     Month.pluck(:bulan).to_s
+#     bulan.pluck(:bulan).to_s
 #   end
   def set_urut
       if self.bulan == 'Januari'

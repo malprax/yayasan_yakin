@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20150609215740) do
 
   create_table "cards", force: :cascade do |t|
     t.string   "month"
+    t.string   "date"
     t.decimal  "amount"
     t.string   "employee"
     t.integer  "urut"
