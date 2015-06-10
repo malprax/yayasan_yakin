@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  transaction: MyString
+  debit: 9.99
+  credit: 9.99
+  amount: 9.99
+  description: MyString
+
+two:
+  date: MyString
+  transaction: MyString
+  debit: 9.99
+  credit: 9.99
+  amount: 9.99
+  description: MyString

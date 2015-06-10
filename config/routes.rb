@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :cashflows
+
   resources :donaturs
 
   devise_for :users

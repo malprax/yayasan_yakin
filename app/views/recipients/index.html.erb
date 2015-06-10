@@ -4,14 +4,16 @@
       <% unless @recipients.blank? %>
       <h4>Penerima Santunan Bulanan</h4>
 
-      <table class="table table-hover table-striped table-condensed">
+      <table class="table table-hover table-striped">
         <thead>
           <tr>
             <th>Nama</th>
             <th>Tempat, Tanggal Lahir</th>
             <th class="hidden-xs hidden-sm">Alamat</th>
             <th>Pekerjaan</th>
+            <% if signed_in? %>
             <th colspan="2"></th>
+            <% end %>
           </tr>
         </thead>
 

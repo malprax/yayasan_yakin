@@ -1,0 +1,71 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8 col-md-8">
+      <%= form_for(@cashflow, :html => { class:"form-horizontal", role:"form"}) do |f| %>
+        <% if @cashflow.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@cashflow.errors.count, "error") %></h2>
+
+            <ul>
+            <% @cashflow.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+      
+        <div class="form-group">
+          <%= f.label :date, "Tanggal", for: "inputText3", class:"col-sm-3 col-md-3 control-label weight"  %>
+          <div class="col-sm-8 col-md-4">
+            <%= f.text_field :date, class: "datepicker form-control weight", id:"inputText3", placeholder:"input tanggal" %>
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <%= f.label :name, "Transaksi", for: "inputText3", class:"col-sm-3 col-md-3 control-label weight"  %>
+          <div class="col-sm-8 col-md-4">
+            <%= f.text_field :name, class: "form-control weight", id:"inputText3", placeholder:"input transaksi" %>
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <%= f.label :debit, "Pemasukan", for: "inputText3", class:"col-sm-3 col-md-3 control-label weight"  %>
+          <div class="col-sm-8 col-md-4">
+            <%= f.text_field :debit, class: "form-control weight", id:"inputText3", placeholder:"input pemasukan" %>
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <%= f.label :credit, "Pengeluaran", for: "inputText3", class:"col-sm-3 col-md-3 control-label weight"  %>
+          <div class="col-sm-8 col-md-4">
+            <%= f.text_field :credit, class: "form-control weight", id:"inputText3", placeholder:"input pengeluaran" %>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <%= f.label :amount, "Saldo Kas", for: "inputText3", class:"col-sm-3 col-md-3 control-label weight"  %>
+          <div class="col-sm-8 col-md-4">
+            <%= f.text_field :amount, class: "form-control weight", id:"inputText3", placeholder:"input saldo kas" %>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <%= f.label :description, "Keterangan", for: "inputText3", class:"col-sm-3 col-md-3 control-label weight"  %>
+          <div class="col-sm-8 col-md-4">
+            <%= f.text_field :description, class: "form-control weight", id:"inputText3", placeholder:"input keterangan" %>
+          </div>
+        </div>
+           
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-3 col-md-offset-3">
+             <%= action_name == "new" ? (f.submit "Buat Transaksi", class:"btn btn-success"):(f.submit "Edit Transaksi", class:"btn btn-success") %>
+          </div>
+        </div>
+      
+        <br>
+        <% end %>
+    </div>
+  </div>
+</div>
+
