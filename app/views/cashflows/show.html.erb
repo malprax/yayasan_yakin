@@ -1,34 +1,46 @@
-
-
-<p>
-  <strong>Date:</strong>
-  <%= @cashflow.date %>
-</p>
-
-<p>
-  <strong>Transaction:</strong>
-  <%= @cashflow.name %>
-</p>
-
-<p>
-  <strong>Debit:</strong>
-  <%= @cashflow.debit %>
-</p>
-
-<p>
-  <strong>Credit:</strong>
-  <%= @cashflow.credit %>
-</p>
-
-<p>
-  <strong>Amount:</strong>
-  <%= @cashflow.amount %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @cashflow.description %>
-</p>
-
-<%= link_to 'Edit', edit_cashflow_path(@cashflow) %> |
-<%= link_to 'Back', cashflows_path %>
+<div class="col-xs-12 col-sm-4 col-md-4">
+  <div class="panel panel-success">
+    <!-- Default panel contents -->
+    <div class="panel-heading"></div>
+  
+    <!-- Table -->
+    <table class="table table-hover">
+    
+      <tbody>  
+          
+          <tr>
+            <td>Tanggal</td>
+            <td><%= @cashflow.date %></td>
+          </tr>
+          
+          <tr>
+            <td>Kejadian</td>
+            <td><%= @cashflow.name.camelize %></td>
+          </tr>
+          <% if @cashflow.debit %>
+          <tr>
+            <td>Pemasukan</td>
+            <td><%= "#{number_to_currency(@cashflow.debit, precision:0, unit:"Rp ")}" %></td>
+          </tr>
+          <% else %>
+          <tr>
+            <td>Pengeluaran</td>
+            <td><%= "#{number_to_currency(@cashflow.credit, precision:0, unit:"Rp ")}" %></td>
+          </tr>
+          <% end %>
+          <tr>
+            <td>Keterangan</td>
+            <td><%= @cashflow.description %></td>
+          </tr>
+          
+      </tbody>
+    </table>
+  
+    <div class="panel-footer">
+      <% if signed_in? %>
+          <%= link_to 'Edit', edit_cashflow_path(@cashflow), class:"btn btn-default" %> 
+      <% end %>
+      <%= link_to 'Kembali', cashflows_path, class:"btn btn-primary" %>
+    </div>
+  </div>
+</div>

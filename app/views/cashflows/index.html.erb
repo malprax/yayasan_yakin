@@ -19,10 +19,10 @@
           <% @cashflows.each do |cashflow| %>
             <tr>
               <td><%= link_to cashflow.date, cashflow %></td>
-              <td class="hidden-xs hidden-sm"><%= cashflow.name %></td>
+              <td class="hidden-xs hidden-sm"><%= cashflow.name.camelize %></td>
               <td class="center"><%= number_to_currency(cashflow.debit, precision: 0, unit: "Rp ") %></td>
               <td class="center"><%= number_to_currency(cashflow.credit, precision: 0, unit: "Rp ") %></td>
-              <td class="hidden-sm hidden-xs"><%= cashflow.description %></td>
+              <td class="hidden-sm hidden-xs"><%= cashflow.description.camelize %></td>
               <% if signed_in? %>
               <td><%= link_to '<span class="glyphicon glyphicon-edit" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Edit"></span>'.html_safe, edit_cashflow_path(cashflow) %></td>
               <td><%= link_to '<span class="glyphicon glyphicon-remove" aria-hidden="true"data-toggle="tooltip" data-placement="top" title="Hapus"></span>'.html_safe,  cashflow, method: :delete, data: { confirm: 'Anda Yakin Hapus?' } %></td>
@@ -30,8 +30,7 @@
             </tr>
           <% end %>
             <tr>
-              <td class="warnatabelhijau"></td>
-              <td class="right warnatabelhijau"><strong>Total Saldo Kas</strong></td>
+              <td colspan="2" class="right warnatabelbiru"><strong>Total Saldo Kas</strong></td>
               <td class="center"><%= link_to "#{  number_to_currency(@cashflows.saldo_kas, precision:0, unit: "Rp ")}", "#" %></td>
               <% if signed_in? %> 
                   <td colspan="4"></td>
