@@ -1,4 +1,5 @@
 class CashflowsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_cashflow, only: [:show, :edit, :update, :destroy]
 
   # GET /cashflows
