@@ -55,8 +55,8 @@ hari ini belajar rails tambah duino gem
 
 #kurangnya yayasan
 Logo Dan Icon
-Jurnal Kas
 Photo Kondisi Rumah Dan Santunan
 Perbaiki sekuriti devise sebelum deploy
 halaman beranda
 bikin footer
+sumbangan dari donatur mesti otomatis tercatat di transaksi
