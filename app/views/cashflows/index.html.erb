@@ -5,7 +5,7 @@
         <thead>
           <tr>
             <th class="warnatabelhijau">Tanggal</th>
-            <th class="warnatabelhijau">Transaksi</th>
+            <th class="warnatabelhijau hidden-xs hidden-sm">Transaksi</th>
             <th class="center warnatabelhijau">Pemasukan</th>
             <th class="center warnatabelhijau">Pengeluaran</th>
             <th class="warnatabelhijau hidden-sm hidden-xs">Keterangan</th>
@@ -18,8 +18,8 @@
         <tbody>
           <% @cashflows.each do |cashflow| %>
             <tr>
-              <td><%= cashflow.date %></td>
-              <td><%= cashflow.name %></td>
+              <td><%= link_to cashflow.date, cashflow %></td>
+              <td class="hidden-xs hidden-sm"><%= cashflow.name %></td>
               <td class="center"><%= number_to_currency(cashflow.debit, precision: 0, unit: "Rp ") %></td>
               <td class="center"><%= number_to_currency(cashflow.credit, precision: 0, unit: "Rp ") %></td>
               <td class="hidden-sm hidden-xs"><%= cashflow.description %></td>
