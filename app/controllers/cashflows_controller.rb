@@ -5,7 +5,7 @@ class CashflowsController < ApplicationController
   # GET /cashflows
   # GET /cashflows.json
   def index
-    @cashflows = Cashflow.all
+    @cashflows = Cashflow.order('date asc')
   end
 
   # GET /cashflows/1
