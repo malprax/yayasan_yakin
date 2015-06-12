@@ -1,9 +1,27 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @donatur.name %>
-</p>
-
-<%= link_to 'Edit', edit_donatur_path(@donatur) %> |
-<%= link_to 'Back', donaturs_path %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-md-4">
+      <div class="panel panel-success">
+        <!-- Default panel contents -->
+        <div class="panel-heading"></div>
+  
+        <!-- Table -->
+        <table class="table table-hover">  
+          <tbody>  
+              <tr>
+                <td>Nama</td>
+                <td><%= @donatur.name.camelize %></td>
+              </tr>
+          </tbody>
+        </table>
+  
+        <div class="panel-footer">
+          <%# if signed_in? %>
+              <%= link_to 'Edit', edit_donatur_path(@donatur), class:"btn btn-default" %> 
+          <%# end %>
+          <%= link_to 'Kembali', donaturs_path, class:"btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

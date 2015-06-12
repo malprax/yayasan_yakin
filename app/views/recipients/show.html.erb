@@ -1,113 +1,116 @@
-<div class="col-xs-12 col-sm-4 col-md-4">
-  <div class="panel panel-success">
-    <!-- Default panel contents -->
-    <div class="panel-heading"></div>
+<div class="container-fluid">
+  <div class="row">
+    </div><div class="col-xs-12 col-sm-4 col-md-4">
+      <div class="panel panel-success">
+        <!-- Default panel contents -->
+        <div class="panel-heading"></div>
   
-    <!-- Table -->
-    <table class="table table-hover">
+        <!-- Table -->
+        <table class="table table-hover">
     
-      <tbody>  
+          <tbody>  
           
-          <tr>
-            <td>Nama</td>
-            <td><%= @recipient.name %></td>
-          </tr>
+              <tr>
+                <td>Nama</td>
+                <td><%= @recipient.name %></td>
+              </tr>
           
-          <tr>
-            <td>Nomor KTP</td>
-            <td><%= @recipient.nik %></td>
-          </tr>
-          <tr>
-            <td>Tempat, Tanggal Lahir</td>
-            <td><%= @recipient.lahir %></td>
-          </tr>
-          <tr>
-            <td>Alamat Lengkap</td>
-            <td><%= @recipient.alamat_lengkap %></td>
-          </tr>
-          <tr>
-            <td>Agama</td>
-            <td><%= @recipient.religion %></td>
-          </tr>
-          <tr>
-            <td>Status</td>
-            <td><%= @recipient.marital_status %></td>
-          </tr>
-          <tr>
-            <td>Kode Pos</td>
-            <td><%= @recipient.pos_code %></td>
-          </tr>
-          <tr>
-            <td>Propinsi</td>
-            <td><%= @recipient.province %></td>
-          </tr>
-          <tr>
-            <td>Negara</td>
-            <td><%= @recipient.nationality %></td>
-          </tr>
+              <tr>
+                <td>Nomor KTP</td>
+                <td><%= @recipient.nik %></td>
+              </tr>
+              <tr>
+                <td>Tempat, Tanggal Lahir</td>
+                <td><%= @recipient.lahir %></td>
+              </tr>
+              <tr>
+                <td>Alamat Lengkap</td>
+                <td><%= @recipient.alamat_lengkap %></td>
+              </tr>
+              <tr>
+                <td>Agama</td>
+                <td><%= @recipient.religion %></td>
+              </tr>
+              <tr>
+                <td>Status</td>
+                <td><%= @recipient.marital_status %></td>
+              </tr>
+              <tr>
+                <td>Kode Pos</td>
+                <td><%= @recipient.pos_code %></td>
+              </tr>
+              <tr>
+                <td>Propinsi</td>
+                <td><%= @recipient.province %></td>
+              </tr>
+              <tr>
+                <td>Negara</td>
+                <td><%= @recipient.nationality %></td>
+              </tr>
           
           
-      </tbody>
-    </table>
+          </tbody>
+        </table>
   
-    <div class="panel-footer">
-      <%# if signed_in? %>
-          <%#= link_to 'Edit', edit_recipient_path(@recipient), class:"btn btn-default" %> 
-      <%# end %>
-      <%#= link_to 'Kembali', santunan_path, class:"btn btn-primary" %>
+        <div class="panel-footer">
+          <%# if signed_in? %>
+              <%#= link_to 'Edit', edit_recipient_path(@recipient), class:"btn btn-default" %> 
+          <%# end %>
+          <%#= link_to 'Kembali', santunan_path, class:"btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-xs-12 col-sm-4 col-md-4">
+      <div class="panel panel-success">
+        <!-- Default panel contents -->
+        <div class="panel-heading"></div>
+  
+        <!-- Table -->
+        <table class="table table-hover table-bordered">
+          <tbody>  
+              <tr>
+                <td class="warnatabel center">No</td>
+                <td class="warnatabel">Bulan</td>
+                <td class="warnatabel">Tanggal</td>
+                <td class="warnatabel center">Jumlah</td>
+                <td class="warnatabel">Petugas</td>
+                <% if signed_in? %>
+                <td class="warnatabel center" colspan="2"></td>
+                <% end %>
+              </tr>
+                <% @card.each_with_index do |card, i| %>
+              <tr>
+                <td class="center"><%= i = i + 1 %></td>
+                <td><%= card.month %></td>
+                <td><%= card.date %></td>
+                <td><%= "#{number_to_currency(card.amount, precision: 0, unit: "Rp ")}" %></td>
+                <td><%= card.employee %></td>
+                <% if signed_in? %>
+                <% if card.amount || card.employee || card.date  %>
+                <td><%= link_to 'Edit', edit_recipient_card_path(@recipient, card)  %></td>
+                <% else %>
+                <td><%= link_to 'Isi', edit_recipient_card_path(@recipient, card)  %></td>
+                <% end %>
+                <% end %>
+              </tr> 
+            <% end %>
+          </tbody>
+        </table>
+  
+        <div class="panel-footer">
+          <%#= link_to 'Buat Bukti Penyaluran', edit_recipient_card_path(@recipient, @card) %>
+          <%# if signed_in? %>
+          <%#= unless @cards.blank? %>
+              <%#= link_to 'Edit', edit_recipient_card_path(@recipient), class:"btn btn-default" %> 
+          <%# end %>
+          <%#= link_to 'Kembali', santunan_path, class:"btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <%= link_to 'Kembali', recipients_path %>
     </div>
   </div>
 </div>
-
-
-<div class="col-xs-12 col-sm-4 col-md-4">
-  <div class="panel panel-success">
-    <!-- Default panel contents -->
-    <div class="panel-heading"></div>
-  
-    <!-- Table -->
-    <table class="table table-hover table-bordered">
-      <tbody>  
-          <tr>
-            <td class="warnatabel center">No</td>
-            <td class="warnatabel">Bulan</td>
-            <td class="warnatabel">Tanggal</td>
-            <td class="warnatabel center">Jumlah</td>
-            <td class="warnatabel">Petugas</td>
-            <% if signed_in? %>
-            <td class="warnatabel center" colspan="2"></td>
-            <% end %>
-          </tr>
-            <% @card.each_with_index do |card, i| %>
-          <tr>
-            <td class="center"><%= i = i + 1 %></td>
-            <td><%= card.month %></td>
-            <td><%= card.date %></td>
-            <td><%= "#{number_to_currency(card.amount, precision: 0, unit: "Rp ")}" %></td>
-            <td><%= card.employee %></td>
-            <% if signed_in? %>
-            <% if card.amount || card.employee || card.date  %>
-            <td><%= link_to 'Edit', edit_recipient_card_path(@recipient, card)  %></td>
-            <% else %>
-            <td><%= link_to 'Isi', edit_recipient_card_path(@recipient, card)  %></td>
-            <% end %>
-            <% end %>
-          </tr> 
-        <% end %>
-      </tbody>
-    </table>
-  
-    <div class="panel-footer">
-      <%#= link_to 'Buat Bukti Penyaluran', edit_recipient_card_path(@recipient, @card) %>
-      <%# if signed_in? %>
-      <%#= unless @cards.blank? %>
-          <%#= link_to 'Edit', edit_recipient_card_path(@recipient), class:"btn btn-default" %> 
-      <%# end %>
-      <%#= link_to 'Kembali', santunan_path, class:"btn btn-primary" %>
-    </div>
-  </div>
-</div>
-<div class="col-xs-12 col-sm-12 col-md-12">
-    <%= link_to 'Kembali', recipients_path %>
-</div>
-

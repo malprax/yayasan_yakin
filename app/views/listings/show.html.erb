@@ -1,17 +1,28 @@
-<div class="container-fluid">
-  <p id="notice"><%= notice %></p>
-
-  <p>
-    <strong>Amount:</strong>
-    <%= @listing.amount %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= @listing.donatur.name%>
-  </p>
-
-  <%= link_to 'Edit', edit_listing_path(@listing) %> |
-  <%= link_to 'Back', listings_path %>
+<div class="col-xs-12 col-sm-4 col-md-4">
+  <div class="panel panel-success">
+    <!-- Default panel contents -->
+    <div class="panel-heading"></div>
   
+    <!-- Table -->
+    <table class="table table-hover">  
+      <tbody>  
+          <tr>
+            <td>Nama</td>
+            <td><%= @listing.donatur.name.camelize %></td>
+          </tr>
+          
+          <tr>
+            <td>Jumlah</td>
+            <td><%= @listing.amount %></td>
+          </tr>     
+      </tbody>
+    </table>
+  
+    <div class="panel-footer">
+      <%# if signed_in? %>
+          <%= link_to 'Edit', edit_listing_path(@listing), class:"btn btn-default" %> 
+      <%# end %>
+      <%= link_to 'Kembali', listings_path, class:"btn btn-primary" %>
+    </div>
+  </div>
 </div>
