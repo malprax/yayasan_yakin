@@ -68,19 +68,33 @@
 //  }
 //}
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 200px;
+}
+
 /* Footer styles
 -------------------------------------------------- */
 #footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 280px;
+  height: 200px;
+  padding: 80px 0 80px 0;
+  background: #6d7cab;
+  border-top: 10px solid #D9EDF7;
   
+//  6D7CAB
 }
 
 
 .footertext {
   color: #ffffff;
+  text-align: center;
 }
 
