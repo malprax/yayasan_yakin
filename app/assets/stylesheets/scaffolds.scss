@@ -86,8 +86,9 @@ body {
   /* Set the fixed height of the footer here */
   height: 200px;
   padding: 80px 0 80px 0;
+  background: image-url('http://riordanalumni.com/wp-content/uploads/2012/08/darkdenim3.png') repeat !important;
   background: #6d7cab;
-  border-top: 10px solid #D9EDF7;
+  border-top: 2px solid #34D7D7;
   
 //  6D7CAB
 }
@@ -98,3 +99,5 @@ body {
   text-align: center;
 }
 
+
+//url(http://digiwarestore.com/themes/default-bootstrap/css/../img/change/footer-bg.png) repeat-x,url(http://digiwarestore.com/themes/default-bootstrap/css/../img/change/darkdenim3.png) repeat !important
