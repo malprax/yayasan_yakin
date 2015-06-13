@@ -74,30 +74,42 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 200px;
+  margin-bottom: 800px;
 }
 
 /* Footer styles
 -------------------------------------------------- */
 #footer {
+  .footertext {
+    color: #00A651;
+  }
+  h5{
+    margin: 0 0 0 30px;
+  }
+  
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 200px;
-  padding: 80px 0 80px 0;
+  height: 400px;
+  padding: 80px 0 100px 0;
   background: url('http://riordanalumni.com/wp-content/uploads/2012/08/darkdenim3.png') repeat !important;
   background: #6d7cab;
   border-top: 2px solid #34D7D7;
   
-//  6D7CAB
+  .bottom-footer{
+    margin: 150px 0 0 0px;
+    border-top: 1px solid #515151;
+    color: #00A651;
+    bottom: -50px;
+    padding: 15px 0 0 30px;
+    width: 100%;
+  }
+  
 }
 
 
-.footertext {
-  color: #ffffff;
-  text-align: center;
-}
+
 
 
 //url(http://digiwarestore.com/themes/default-bootstrap/css/../img/change/footer-bg.png) repeat-x,url(http://digiwarestore.com/themes/default-bootstrap/css/../img/change/darkdenim3.png) repeat !important
