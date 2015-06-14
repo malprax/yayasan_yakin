@@ -4,7 +4,8 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 400px;
+//  margin-bottom: 100px;
+  border-radius:0px !important;
 }
 
 /* Footer styles
@@ -14,12 +15,12 @@ body {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 400px;
+//  min-height: 400px;
   padding: 60px 30px 100px 30px;
   background: url('http://riordanalumni.com/wp-content/uploads/2012/08/darkdenim3.png') repeat !important;
   background: #6d7cab;
+  background: 100% auto;
   border-top: 2px solid #34D7D7;
-  
   .footertext {
     color: #00A651;
   }
@@ -27,37 +28,43 @@ body {
   div{
     font-weight: bold;
     text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
-    li{
-      padding: 15px 0 0 0 ;  
-      color: #777777;
-      text-decoration: none;
-      .glyphicon-map-marker{
-        color: yellow;
-        font-size: 20px;
-        vertical-align: baseline;
-        float:left;
-        margin-right:10px;
-      }
-      .glyphicon-earphone{
-        color: blue;
-        font-size: 20px;
-        margin-right:10px;
-        vertical-align: baseline;
-        float:left;
+
+    ul{
+      margin-bottom: 20px;
+      li{
+            padding: 15px 0 0 0 ;  
+            color: #777777;
+            text-decoration: none;
+            .glyphicon-map-marker{
+              color: yellow;
+              font-size: 20px;
+              vertical-align: baseline;
+              float:left;
+              margin-right:10px;
+            }
+            .glyphicon-earphone{
+              color: blue;
+              font-size: 20px;
+              margin-right:10px;
+              vertical-align: baseline;
+              float:left;
+            }
       }
     }
   }
   
   div > .katabijak{
-    margin: 10px 0 0 0;
+//    margin: 30px;
+//    min-height:100%;
+    padding: 10px 0 0 15px;
     border-left: 1px solid #515151;
   }
   
   .bottom-footer{
-    margin: 95px 0 0 0px;
+    margin: 95px 0 -50px 0px;
     border-top: 1px solid #515151;
     color: #00A651;
-    bottom: -50px;
+    bottom: -55px;
     padding: 15px 0 0 0px;
     width: 100%;
   }
