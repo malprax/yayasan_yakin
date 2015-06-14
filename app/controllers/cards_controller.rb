@@ -1,4 +1,5 @@
 class CardsController < ApplicationController
+  layout "dashboard"
   before_action :set_recipient, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_card, only: [:show, :edit, :update, :destroy]
 

@@ -1,4 +1,5 @@
 class RecipientsController < ApplicationController
+  layout "dashboard"  
   before_action :authenticate_user!, except: [:index, :show, :santunan]
   before_action :set_recipient, only: [:show, :edit, :update, :destroy]
   

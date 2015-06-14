@@ -1,4 +1,5 @@
 class YearsController < ApplicationController
+  layout "dashboard"
   before_action :authenticate_user!, except: [:index]
   before_action :set_year, only: [:show, :edit, :update, :destroy]
 

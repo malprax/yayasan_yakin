@@ -28,21 +28,22 @@ body {
     font-weight: bold;
     text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
     li{
-      padding: 5px 0 0 0 ;  
+      padding: 15px 0 0 0 ;  
       color: #777777;
       text-decoration: none;
       .glyphicon-map-marker{
         color: yellow;
         font-size: 20px;
-        vertical-align: auto;
+        vertical-align: baseline;
+        float:left;
         margin-right:10px;
-        padding-top:10px;
       }
       .glyphicon-earphone{
         color: blue;
         font-size: 20px;
         margin-right:10px;
-        vertical-align: auto;
+        vertical-align: baseline;
+        float:left;
       }
     }
   }
@@ -53,7 +54,7 @@ body {
   }
   
   .bottom-footer{
-    margin: 150px 0 0 0px;
+    margin: 95px 0 0 0px;
     border-top: 1px solid #515151;
     color: #00A651;
     bottom: -50px;

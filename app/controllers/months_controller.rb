@@ -1,4 +1,5 @@
 class MonthsController < ApplicationController
+  layout "dashboard"
   before_action :authenticate_user!, except: [:index]
   before_action :set_year, only: [:new, :create, :edit, :update, :destroy ]
   before_action :set_month, only: [:show, :edit, :update, :destroy]
