@@ -16,9 +16,9 @@
         </table>
   
         <div class="panel-footer">
-          <%# if signed_in? %>
+          <% if signed_in? %>
               <%= link_to 'Edit', edit_donatur_path(@donatur), class:"btn btn-default" %> 
-          <%# end %>
+          <% end %>
           <%= link_to 'Kembali', donaturs_path, class:"btn btn-primary" %>
         </div>
       </div>
