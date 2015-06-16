@@ -31,8 +31,14 @@
                   <td class="center">
                     <% if signed_in? %>
                       <%= link_to list.id, edit_listing_path(list), id: "list" %>
+                      <%= "#{number_to_currency(list.amount, precision: 0, unit: "Rp ")}" %> 
+                    <% else %>        
+                          <% unless list.amount.blank? %>
+                              <%= '<i class="glyphicon glyphicon-ok" aria-hidden="true" id="green"></i>'.html_safe %>
+                          <% else %>
+                              <%= '<i class="glyphicon glyphicon-remove" aria-hidden="true" id="red"></i>'.html_safe %>
+                          <% end %>
                     <% end %>
-                      <%= "#{number_to_currency(list.amount, precision: 0, unit: "Rp ")}" %>
                   </td>                   
               <% end %>
             </tr>
