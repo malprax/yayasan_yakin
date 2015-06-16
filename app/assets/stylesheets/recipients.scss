@@ -2,7 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* Recipients styles
+-------------------------------------------------- */
 
+#recipients{
+  min-height: 400px;
+}
 .warnatabel{color: #8a6d3b;
   background-color: #fcf8e3;
   border-color: #faebcc;}

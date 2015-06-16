@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" id="recipients">
   <div class="row">
     <div class="col-md-12">
       <% unless @recipients.blank? %>
@@ -32,6 +32,8 @@
           <% end %>
         </tbody>
       </table>
+      <% else %>
+      <div class="col-md-12 col-sm-12 col-xs-12"><h1 class="center">Maaf Belum Ada Data Yang Bisa Diperlihatkan</h1></div>
       <% end %>
 
       <br>
