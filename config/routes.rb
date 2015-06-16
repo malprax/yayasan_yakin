@@ -7,11 +7,7 @@ Rails.application.routes.draw do
 
   resources :donaturs
 
-  if Rails.env.production?
-      devise_for :users, :controllers => {:registrations => "registrations"}
-  else
-      devise_for :users  
-  end
+  devise_for :users , :skip => :registrations
   resources :listings, only:[:legalitas, :struktur, :beranda, :tabel, :new, :create, :index, :edit, :update]
   get 'beranda' => 'listings#beranda'
   get 'tabel' => 'listings#tabel'
