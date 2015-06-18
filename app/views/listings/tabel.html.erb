@@ -2,7 +2,7 @@
   <%#= render 'index' %>
 
 
-  <div class="col-md-12">
+
     <% unless @listings.blank? %>
     <table class="table table-striped table-bordered table-hover table-condensed">
       <thead>
@@ -26,7 +26,37 @@
       <tbody>
             <% @listings_by_donatur.each do |donatur, listing| %>
             <tr>
-                  <td><%= donatur  %></td>
+                  <td>
+                    <span class="visible-lg"><%= donatur %></span>
+                    <span class= "hidden-lg hidden-xs" >
+                      <% if donatur.split.length > 3 %> 
+                          <% if donatur.split[2].length < 2 %>
+                              <%= donatur.split[3] %>
+                          <% else %>
+                          <% end %>
+                          <%= donatur.split[0]+" "+donatur.split[1]+" "+donatur.split[2]  %>
+                      <% elsif donatur.split.length == 3 %>
+                          <%= donatur.split[0]+" "+donatur.split[1]+" "+donatur.split[2].chr  %>
+                      <% else %>
+                          <%= donatur %>
+                      <% end %>
+                    </span>
+                    
+                    <span class= "hidden-lg hidden-xs">
+                      <% if donatur.split.length > 3 %> 
+                          <% if donatur.split[2].length < 2 %>
+                              <%= donatur.split[3] %>
+                          <% else %>
+                          <% end %>
+                          <%= donatur.split[0]+" "+donatur.split[1]+" "+donatur.split[2]  %>
+                      <% elsif donatur.split.length == 3 %>
+                          <%= donatur.split[0]+" "+donatur.split[1]+" "+donatur.split[2].chr  %>
+                      <% else %>
+                          <%= donatur %>
+                      <% end %>
+                    </span>
+                    
+                  </td>
               <% listing.each do |list| %>
                   <td class="center">
                     <% if signed_in? %>
@@ -46,7 +76,7 @@
       </tbody>
     </table> 
     <% end %> 
-  </div> 
+
 </div>
 
 
