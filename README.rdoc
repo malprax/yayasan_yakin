@@ -60,3 +60,5 @@ halaman beranda
 sumbangan dari donatur mesti otomatis tercatat di transaksi
 kata donatur di ubah nama menjadi donasi
 catat semua transaksi
+
+ada logika tambahkan dinama dalam tabel
