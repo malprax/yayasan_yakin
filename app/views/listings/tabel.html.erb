@@ -28,22 +28,7 @@
             <tr>
                   <td>
                     <span class="visible-lg"><%= donatur %></span>
-                    <span class= "hidden-lg hidden-xs" >
-                      <% if donatur.split.length > 3 %> 
-                          <%# if donatur.split[2].length < 2 %>
-                              <%= donatur.split[3] %>
-                          <%# else %>
-                              <%= donatur.split[0]+" "+donatur.split[1]+" "+donatur.split[2]  %>
-                          <%# end %>
-                          
-                      <% elsif donatur.split.length == 3 %>
-                          <%= donatur.split[0]+" "+donatur.split[1]+" "+donatur.split[2].chr  %>
-                      <% else %>
-                          <%= donatur %>
-                      <% end %>
-                    </span>
-                    
-                    <span class= "hidden-lg hidden-xs">
+                    <span class=hidden-lg>
                       <% if donatur.split.length > 3 %> 
                           <% if donatur.split[2].length < 2 %>
                               <%= donatur.split[3] %>
