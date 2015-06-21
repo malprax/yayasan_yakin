@@ -62,4 +62,5 @@ kata donatur di ubah nama menjadi donasi
 catat semua transaksi
 ada logika tambahkan dinama dalam tabel
 masih mencari halaman beranda yang bagus
-
+sekarang coba menunya tinggal beranda donatur santunan, tiap kali tabel donatur diisi maka kas bertambah dan kartu donatur dibuat, tiap kali tabel santunan diisi maka kas berkurang dan kartu santunan dibuat, 
+belum ada progress sampai hari ini karena masih banyak urusan
