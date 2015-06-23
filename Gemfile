@@ -77,7 +77,8 @@ gem 'rails_12factor', group: :production
 # gem 'capistrano-rails', group: :development
 
 # mailboxer
-gem "mailboxer"
+# gem "mailboxer" its broken
+gem 'mailboxer', :git => 'git://github.com/div/mailboxer.git', :branch => 'rails42-foreigner'
 
 
 
