@@ -23,6 +23,8 @@ Rails.application.routes.draw do
       resources :months
   end
   
+  resources :conversations, only: [:index, :show, :destroy]
+  
   root 'listings#beranda'
 
   # The priority is based upon order of creation: first created -> highest priority.
