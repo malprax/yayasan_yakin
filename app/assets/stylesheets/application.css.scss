@@ -18,3 +18,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.alert-notice{
+  @extend .alert-success;
+}
+
+.alert-notice{
+  @extend .alert-warning;
+}
+
