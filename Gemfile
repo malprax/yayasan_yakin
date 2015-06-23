@@ -76,6 +76,9 @@ gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# mailboxer
+gem "mailboxer"
+
 
 
 group :development, :test do
