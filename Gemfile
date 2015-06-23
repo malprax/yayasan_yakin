@@ -14,6 +14,8 @@ gem 'sass-rails', '~> 5.0'
 
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'autoprefixer-rails'
+gem 'bootstrap-will_paginate'
+gem 'will_paginate'
 
 #image 
 gem 'paperclip'
@@ -73,6 +75,8 @@ gem 'rails_12factor', group: :production
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
