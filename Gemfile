@@ -76,6 +76,9 @@ gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#avatar
+gem 'gravatar_image_tag'
+
 # mailboxer
 # gem "mailboxer" its broken
 gem 'mailboxer', :git => 'git://github.com/div/mailboxer.git', :branch => 'rails42-foreigner'
