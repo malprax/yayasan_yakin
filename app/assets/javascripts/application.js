@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require chosen-jquery
+//= require messages
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require bootstrap-datepicker

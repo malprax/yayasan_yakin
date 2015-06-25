@@ -85,6 +85,7 @@ gem 'mailboxer', :git => 'git://github.com/div/mailboxer.git', :branch => 'rails
 
 #choosen rails
 gem 'chosen-rails'
+# gem 'chosen-rails', git: 'git://github.com/qpowell/chosen-rails.git'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
