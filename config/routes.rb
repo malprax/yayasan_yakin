@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'messages/new'
+
   get 'home/index'
 
   resources :cashflows
