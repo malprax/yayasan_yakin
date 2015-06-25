@@ -83,7 +83,8 @@ gem 'gravatar_image_tag'
 # gem "mailboxer" its broken
 gem 'mailboxer', :git => 'git://github.com/div/mailboxer.git', :branch => 'rails42-foreigner'
 
-
+#choosen rails
+gem 'chosen-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
