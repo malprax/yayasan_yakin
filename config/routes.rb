@@ -26,9 +26,16 @@ Rails.application.routes.draw do
   end
   
   resources :conversations, only: [:index, :show, :destroy] do
-    member do
-      post :reply
-    end
+    # member do
+      # post :reply
+      # post :restore
+    # end
+    # collection do
+#       delete :empty_trash
+#     end
+      member  do
+        post :mark_as_read
+      end
   end
   
   root 'listings#beranda'
