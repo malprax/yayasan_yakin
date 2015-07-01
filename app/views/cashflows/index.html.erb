@@ -31,7 +31,7 @@
           <% end %>
             <tr>
               <td colspan="2" class="right warnatabelbiru"><strong>Total Saldo Kas</strong></td>
-              <td class="center"><%= link_to "#{  number_to_currency(@cashflows.saldo_kas, precision:0, unit: "Rp ")}", "#" %></td>
+              <td class="center"><%#= link_to "#{  number_to_currency(@cashflows.saldo_kas, precision:0, unit: "Rp ")}", "#" %></td>
               <% if signed_in? %> 
                   <td colspan="4"></td>
               <% else %>
