@@ -1,10 +1,12 @@
 class Video < ActiveRecord::Base
-  YT_LINK_FORMAT = /\A.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([\A#\&\?]*).*/i
+  YT_LINK_FORMAT = /\A(?:https?:\/\/)?(?:www\.)?youtu(?:\.be|be\.com)\/(?:watch\?v=)?([\w-]{10,})/
+  # YT_LINK_FORMAT = /\A.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([\A#\&\?]*).*/i
+#   https://www.youtube.com/watch?v=RWQ-dnpplaA
  
   validates :link, presence: true, format: YT_LINK_FORMAT
   before_create -> do
     uid = link.match(YT_LINK_FORMAT)
-    self.uid = uid[2] if uid && uid[2]
+    self.uid = uid[1] if uid && uid[1]
  
     if self.uid.to_s.length != 11
       self.errors.add(:link, 'is invalid.')
