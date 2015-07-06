@@ -17,4 +17,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) << :name
     
   end
+  
+  private
+  def current_user
+    User.new(session[:id])
+  end
+  helper_method :current_user
 end
