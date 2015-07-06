@@ -36,6 +36,21 @@
                   <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
                 </ul>
             </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" aria-expanded="false" role="button" data-toggle="dropdown">Role <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <% User::ROLES.each do |k, v| %>
+                  <li>
+                    <%= link_to session_path(k), method: :patch do %>
+                      <%= v %>
+                      <% if v == current_user.role %>
+                          <small class="text-muted">(current)</small>
+                      <% end %>
+                    <% end %>
+                  </li>
+                <% end %>
+              </ul>
+            </li>
         <% else %>
             <li >
                 <%= link_to 'Login', new_user_session_path, title: "Login", data: {tooltip: true} %>
