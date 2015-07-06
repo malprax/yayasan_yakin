@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index]
   resources :messages, only: [:new, :create]
   resources :videos, only: [:index, :new, :create]
+  resources :projects
   
   get 'home/index'
 
