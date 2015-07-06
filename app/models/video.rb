@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: videos
+#
+#  id         :integer          not null, primary key
+#  link       :string
+#  title      :string
+#  author     :string
+#  duration   :string
+#  likes      :integer
+#  dislikes   :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  uid        :string
+#
+
 class Video < ActiveRecord::Base
   YT_LINK_FORMAT = /\A(?:https?:\/\/)?(?:www\.)?youtu(?:\.be|be\.com)\/(?:watch\?v=)?([\w-]{10,})/
   # YT_LINK_FORMAT = /\A.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([\A#\&\?]*).*/i

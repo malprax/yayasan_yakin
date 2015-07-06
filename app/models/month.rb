@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: bulans
+# Table name: months
 #
 #  id         :integer          not null, primary key
 #  bulan      :string

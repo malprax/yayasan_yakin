@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: cashflows
+#
+#  id          :integer          not null, primary key
+#  date        :string
+#  name        :string
+#  debit       :decimal(, )
+#  credit      :decimal(, )
+#  amount      :decimal(, )
+#  description :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
