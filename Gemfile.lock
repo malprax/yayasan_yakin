@@ -291,7 +291,7 @@ DEPENDENCIES
   bootstrap-datepicker-rails
   bootstrap-sass (~> 3.3.4)
   bootstrap-will_paginate
-  cancancan
+  cancancan (~> 1.10)
   chosen-rails
   coffee-rails (~> 4.1.0)
   devise

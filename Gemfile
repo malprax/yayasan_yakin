@@ -91,7 +91,7 @@ gem 'chosen-rails'
 gem 'youtube_it'
 
 #ability
-gem 'cancancan'
+gem 'cancancan', '~> 1.10'
 
 group :development, :test do
   gem 'rspec-rails'
