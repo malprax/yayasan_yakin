@@ -61,6 +61,9 @@
                 <% end %>
               </ul>
             </li>
+            <% if can? :create, Project %>
+            <li><%= link_to "Add Project", new_project_path %></li>
+            <% end %>
         <% else %>
             <li >
                 <%= link_to 'Login', new_user_session_path, title: "Login", data: {tooltip: true} %>
