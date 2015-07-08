@@ -1,7 +1,15 @@
 <div class="page-header"><h1>Welcome</h1></div>
-<% if can? :index, Project %>
-  <%= link_to 'Projects', projects_path, class: 'btn btn-lg btn-primary' %>
-<% end %>
+  <% if can? :index, Project %>
+    <%= link_to 'Projects', projects_path, class: 'btn btn-lg btn-primary' %>
+  <% end %>
+
+  <% if can? :update, project %>
+    <%= link_to 'Edit', edit_project_path(project), class: 'btn btn-info' %>
+  <% end %>
+
+  <% if can? :destroy, project %>
+    <%= link_to 'Delete', project_path(project), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+  <% end %>
 <% @projects.each do |project| %>
   <div class="well well-sm">
     <h2><%= project.title %></h2>

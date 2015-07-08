@@ -9,10 +9,9 @@ class Ability
       if user.role?(:admin)
          can :manage, :all
       elsif user.role?(:moderator)
-         can :create, Project
-         can :read, Project
+        can [:create, :read, :update], [Project, Task]
       elsif user.role?(:user)
-         can :read, Project
+        can :read, Project
       end
     #
     # The first argument to `can` is the action you are giving the user
