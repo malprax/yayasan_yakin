@@ -9,7 +9,9 @@ class Ability
       if user.role?(:admin)
          can :manage, :all
       elsif user.role?(:moderator)
-        can [:create, :read, :update], [Project, Task]
+        # can [:create, :read, :update], [Project, Task]
+        can :manage, Project
+        cannot :destroy, Project
       elsif user.role?(:user)
         can :read, Project
       end
