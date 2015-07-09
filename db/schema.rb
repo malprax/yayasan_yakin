@@ -138,6 +138,8 @@ ActiveRecord::Schema.define(version: 20150709012601) do
     t.boolean  "ongoing"
   end
 
+  add_index "projects", ["ongoing"], name: "index_projects_on_ongoing", using: :btree
+
   create_table "recipients", force: :cascade do |t|
     t.string   "name"
     t.string   "nik"
