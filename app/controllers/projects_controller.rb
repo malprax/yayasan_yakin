@@ -1,10 +1,9 @@
 class ProjectsController < ApplicationController
+  layout "dashboard"
+  #load_resource
+  # skip_authorization_check
   load_and_authorize_resource
-  # def index
-#     @projects = Project.all
-#     # authorize! :index, @project
-#   end
-  
+ 
   # def new
  #    @project = Project.new
  #    # authorize! :new, @project
@@ -40,11 +39,11 @@ class ProjectsController < ApplicationController
   def destroy
     # @project = Project.find(params[:id])
     if @project.destroy
-      flash[:success] = 'Project was destroyed!'
+      redirect_to projects_path, notice: "Project was destroyed"
     else
-      flash[:warning] = 'Cannot destroy this project...'
+      redirect_to projects_path, message: {alert: "Cannot destroy this project..."}
     end
-    redirect_to root_path
+    
     # authorize! :destroy, @project
   end
   
