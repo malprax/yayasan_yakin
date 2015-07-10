@@ -1,6 +1,33 @@
 // Place all the styles related to the listings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#dashboard{
+  padding: 80px 0 300px 0px;
+
+  .logo_image{
+    height:50%;
+    float:left;
+  }
+  .logo_text{
+    vertical-align: center;
+    
+    .short_text{
+      font-size: 100px;
+      font-weight: bolder;
+      font-kerning: 20px;
+      font-family: verdana;
+      letter-spacing: 5px;
+    }
+    .long_text{}
+    #bottom_menu{
+      padding:60px 0 0 0px;
+
+    }
+  }
+  
+  
+}
+
 
 #list{
   font-size: 6px;

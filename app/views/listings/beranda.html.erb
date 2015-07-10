@@ -1,26 +1,25 @@
 
-  <!-- <div class="hero">
-     <h1 class="center">Yayasan Kesejahteraan Islam Nasrullah</h1>
-  </div>
 
- -->
-     <div class="row">
-       <div class="col-xs-12 visible-md">
-         <p class="yayasan"><center>YAYASAN KESEJAHTERAAN ISLAM "NASRULLAH"</center></p>
-          <%= image_tag("logo.png", size: "147x230", class: "logo", align: "center")  %>
-          <h2 ><center>YAKIN</center></h2>
-          <br>
-          <h4 class="lead"><center>Selamat Datang Di Website kami</center></h4>
-          <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-12">
-            
-            <h4 class="col-sm-offset-0 col-sm-12"><center>"bantulah sesama dengan menginfakkan sebagian harta yang anda miliki"</center></h4>
-            <br>
-            
-            <br>
+    <div class="container" id="dashboard">
+      <div class="col-xs-2 col-sm-4 col-md-4  visible-sm visible-md visible-lg">
+                  <%= image_tag("logoweb.png", class:"logo_image")  %>
+      </div>
+      <div class="col-xs-10 col-sm-8 col-md-8 ">
+        <div class="logo_text">
+          <h1 class="visible-sm visible-md visible-lg short_text">Y A K I N</h1> 
+          <h3 class="long_text">YAYASAN KESEJAHTERAAN ISLAM NASRULLAH</h3>       
+          <!-- <h2 class="hidden-xs" align="center">Y A K I N</h2> -->
+          <div class="bottom_menu">
+            <ul class="nav nav-pills">
+              <li role="presentation"><a href="#">Beranda</a></li>
+              <li role="presentation"><a href="#">Donatur</a></li>
+              <li role="presentation"><a href="#">Santunan</a></li>
+            </ul>
           </div>
-          
-       </div>
-     </div>
+        </div>
+      </div>
+    </div>
+
 <%= render 'listings/struktur' %>
 <%#= render 'listings/visi_misi' %>
 <%= render 'listings/legalitas' %>
