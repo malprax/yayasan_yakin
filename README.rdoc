@@ -84,3 +84,4 @@ sudah dari speedy nda adaji tagihan bulan ini
 istirahat buat website malam malam akhir ramadhan ini
 belajar bdd dan tdd dulu
 start again with tdd and bdd
+forget to write for github
