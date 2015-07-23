@@ -90,3 +90,5 @@ start to making a low rate hourly
 new season of coding
 tomorrow pi
 try implement angular as front end
+
+hari ini sudah search materi angular
