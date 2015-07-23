@@ -93,3 +93,4 @@ try implement angular as front end
 
 hari ini sudah search materi angular
 dan juga sudah mnecari materi rails tingkat lanjut
+saatnya dipelajari sedikit demi sedikit
