@@ -118,3 +118,4 @@ besok agenda kita:
 print voucher
 bawa k mandai
 bikin website
+belajar angular
