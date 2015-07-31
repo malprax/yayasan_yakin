@@ -25,7 +25,7 @@
         <li class="dropdown">
           <a href="#" class="hidden-sm dropdown-toggle" data-toggle="dropdown">Santunan<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-              <li> <%= link_to 'Daftar Donatur', recipients_path %></li>
+              <li> <%= link_to 'Daftar Santunan', recipients_path %></li>
               <li> <%= link_to 'Tabel Santunan', "#" %></li>
             </ul>
         </li>
@@ -41,26 +41,26 @@
               <a href="#" class="visible-sm dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i><span class="caret"></span></a>
               <a href="#" class="hidden-sm dropdown-toggle" data-toggle="dropdown"><%#= current_user.email %><span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                  <li> <%#= link_to 'Edit Akun', edit_user_registration_path %></li>
+                  <li> <%= link_to 'Edit Akun', edit_user_registration_path %></li>
                   <li> <%#= link_to 'Percakapan', conversations_path %></li>
                   <li><%#= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
                 </ul>
             </li>
-            <li class="dropdown">
+            <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" aria-expanded="false" role="button" data-toggle="dropdown">Role <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <% User::ROLES.each do |k, v| %>
+                <%# User::ROLES.each do |k, v| %>
                   <li>
-                    <%= link_to session_path(k), method: :patch do %>
-                      <%= v %>
-                      <% if v == current_user.role %>
+                    <%#= link_to session_path(k), method: :patch do %>
+                      <%#= v %>
+                      <%# if v == current_user.role %>
                           <small class="text-muted">(current)</small>
-                      <% end %>
-                    <% end %>
+                      <%# end %>
+                    <%# end %>
                   </li>
-                <% end %>
+                <%# end %>
               </ul>
-            </li>
+            </li> -->
             <% if can? :create, Project %>
             <li><%= link_to "Add Project", new_project_path %></li>
             <% end %>
