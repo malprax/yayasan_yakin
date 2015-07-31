@@ -129,4 +129,5 @@ pergi cari ram
 print voucher
 perbaiki lagi website yayasan
 belajar website lagi
+buat dokumentasi progres perkembangan websitenya yayasan
 
