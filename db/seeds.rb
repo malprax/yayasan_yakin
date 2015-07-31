@@ -35,4 +35,4 @@
 #   Donatur.create(:name => donatur)
 # end
 
-20.times{|i|Project.create!({title: "Project #{i + 1}"})}
+# 20.times{|i|Project.create!({title: "Project #{i + 1}"})}
