@@ -132,3 +132,6 @@ belajar website lagi
 buat dokumentasi progres perkembangan websitenya yayasan
 kerjakan alatnya p yusuf
 
+login as root
+apt-get update
+apt-get upgrade
