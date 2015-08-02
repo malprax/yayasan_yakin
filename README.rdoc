@@ -138,9 +138,11 @@ apt-get update
 apt-get upgrade
 
 #install rvm
+#jangan install ini
 curl -L get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 rvm requirements
+
 
 /bin/bash --login
 sudo /usr/local/rvm/bin/rvm get stable
@@ -149,7 +151,11 @@ rvm requirements
 rvm use --default 2.0.0
 
 #terminal zeus
+#1auto install: 
 apt-get install zsh
+
+#2manual install:
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 curl -L http://install.ohmyz.sh | sh
 
 #Find where ZSH has just been installed to
@@ -157,6 +163,15 @@ which zsh
 
 #change shell
 chsh
+
+well, my solution maybe help you
+
+sudo vim /etc/pam.d/chsh
+then, comment auth required pam_shells.so
+
+sudo chsh $USER -s $(which zsh)
+
+
 
 #install git
 sudo apt-get install git-core
