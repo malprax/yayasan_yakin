@@ -7,14 +7,21 @@ defaults: &defaults
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: macbook
-  password: 
+  # username: ENV["username"]
+#   password:
   host: localhost
   port: 5432
     
 development: 
   database: yayasan_yakin_development
+  username: ENV["database_username"]
+  password: 
   <<: *defaults 
+
+production:
+  database: yayasan_yakin_production
+  username: ENV["database_username"]
+  password: ENV["database_password"]
   
 
 # test: &test
