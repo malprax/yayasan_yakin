@@ -152,5 +152,12 @@ rvm use --default 2.0.0
 apt-get install zsh
 curl -L http://install.ohmyz.sh | sh
 
+#Find where ZSH has just been installed to
+which zsh
+
+#change shell
+chsh
+
 #install git
 sudo apt-get install git-core
+
