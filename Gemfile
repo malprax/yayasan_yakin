@@ -105,6 +105,10 @@ group :development, :test do
   # gem 'spring'
 end
 
+group :production do
+  gem 'puma'
+end
+
 group :test do 
   gem 'shoulda-matchers'
   
