@@ -140,4 +140,6 @@ curl -L get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 rvm requirements
 
+/bin/bash --login
 sudo /usr/local/rvm/bin/rvm get stable
+sudo /usr/local/rvm/bin/rvm install 2.0.0
