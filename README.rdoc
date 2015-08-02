@@ -135,3 +135,7 @@ kerjakan alatnya p yusuf
 login as root
 apt-get update
 apt-get upgrade
+
+curl -L get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+rvm requirements
