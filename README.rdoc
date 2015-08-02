@@ -139,3 +139,5 @@ apt-get upgrade
 curl -L get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 rvm requirements
+
+sudo /usr/local/rvm/bin/rvm get stable
