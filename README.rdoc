@@ -143,3 +143,5 @@ rvm requirements
 /bin/bash --login
 sudo /usr/local/rvm/bin/rvm get stable
 sudo /usr/local/rvm/bin/rvm install 2.0.0
+rvm requirements
+rvm use --default 2.0.0
