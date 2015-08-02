@@ -132,10 +132,12 @@ belajar website lagi
 buat dokumentasi progres perkembangan websitenya yayasan
 kerjakan alatnya p yusuf
 
+#login as super user
 login as root
 apt-get update
 apt-get upgrade
 
+#install rvm
 curl -L get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 rvm requirements
@@ -145,3 +147,10 @@ sudo /usr/local/rvm/bin/rvm get stable
 sudo /usr/local/rvm/bin/rvm install 2.0.0
 rvm requirements
 rvm use --default 2.0.0
+
+#terminal zeus
+apt-get install zsh
+curl -L http://install.ohmyz.sh | sh
+
+#install git
+sudo apt-get install git-core
