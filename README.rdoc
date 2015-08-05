@@ -206,7 +206,7 @@ Fitur website travel:
 1. Dashboard
 2. Transaksi:
    - Invoice:
-     Data invoice: tanggal; jenis invoice(tiket domestik, tiket internasional, tour internasional, tour domestik, paspor dan visa, hotel internasional, hotel domestik, travel, umroh, haji-umroh); no invoice; customer(terhubung dengan data customer) or customer baru; jumlah dibayar, jatuh tempo, komisi sales, Issued by(internal tester, travel demo, simful tech support, demo kasir), status(issued, hold, canceled), time limit, rekening(terhubung dengan data rekeing), sales(terhubung dengan data sales), keterangan
+     Data invoice: tanggal(jquerydate); jenis invoice(tiket domestik, tiket internasional, tour internasional, tour domestik, paspor dan visa, hotel internasional, hotel domestik, travel, umroh, haji-umroh); no invoice(langsung dibuat dengan kode TD/date/month/year/no_i); customer(dari data customer) or customer baru; jumlah dibayar, jatuh tempo, komisi sales, Issued by(internal tester, travel demo, simful tech support, demo kasir), status(issued, hold, canceled), time limit, rekening(dari data rekeing), sales(dari data sales), keterangan
      halaman index customer ada tambah invoice di kiri atas dan search di kanan atas, bagian bawah ada paginasi
    
    - Topup:
@@ -226,10 +226,51 @@ Fitur website travel:
      halaman index Voucher Hotel ada tambah voucher hotel di kiri atas dan search di kanan atas, bagian bawah ada paginasi
      
    - Refund
-     Data penyesuaian: no ref, tanggal(jquerydate); invoice(dari data invoice); biaya refund; status(ok; pending[manajemen]; pending[maskapai]; pending[lainnya]);  edit; hapus
+     Data Refund: no ref, tanggal(jquerydate); invoice(dari data invoice); biaya refund; status(ok; pending[manajemen]; pending[maskapai]; pending[lainnya]);  edit; hapus
      halaman index refund ada tambah refund di kiri atas dan search di kanan atas, bagian bawah ada paginasi
    
    - Letter Of Guarantee
+     Data Refund: no ref, tanggal(jquerydate); Nomor LG(buat otomatis dengan kode LG/date/month/year/no.index) bisa link to show; Recipient; Remarks; edit; hapus
+     halaman index Letter Of Guarantee ada tambah LG di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     halaman shownya
+     kiri :
+     kode LG
+     tombol print LG atau edit LG
+     
+     
+     tulisan Letter Of Guarantee
+     Recipient :
+     Date:
+     
+     Details
+     kolom keterangan; kolom mata uang; kolom jumlah; kolom edit; kolom hapus 
+     
+     Total 
+     
+     Additional remarks
+     Paid
+     
+     kanan:
+     link kembali sejajar dengan tombol print/edit lg
+     tombol tambah item sejajar dengan details
+     
+     
+     Print Out nya:
+     Kop Travel   Letter Of Guarantee
+     
+     Tanggal:   Kepada:
+     Ref:  Kode_LG:
+     
+     Dear Sir Or Madam
+     Please acknowledge this letter of guarantee which stretches as follows:
+     
+     Total || Description || Amount
+     
+     We hereby guarantee to settle payment of above service as per credit terms agreement. We appreciate for your king cooperations
+                                                                                                   
+                                                                                                   Jakarta, 18 september 2013
+                                                                                                   
+                                                                                                   Travel Demo
 3. Data: 
    - Customer:
      Data customer: nama lengkap; jenis customer(walk-in-pax, perorangan, perusahaan, partner, agen travel[l1]. agen travel[l2], agen travel[l3], lainnya); nomor telepon; email; alamat; kota; propinsi; catatan; edit
@@ -249,9 +290,18 @@ Fitur website travel:
      halaman index hotel ada tambah customer di kiri atas dan search di kanan atas, bagian bawah ada paginasi
      
 4. Office:
-   - Cabang
-   - Sales
+   - Cabang:
+     Data Cabang: nama cabang; alamat; nomor telepon; email; penanggung jawab; edit; hapus
+     halaman index cabang ada tambah cabang di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
+   - Sales:
+     Data Sales: cabang(data dari cabang); nama sales; nomor telepon; alamat; email; catatan; edit; hapus
+     halaman index sales ada tambah sales di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
    - Inventaris
+     Data Sales: nama barang; harga; jumlah; kondisi; tanggal pembelian(jquerydate); catatan; edit; hapus
+     halaman index inventaris ada tambah inventaris di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+
 5. Laporan
    - Laporan Penjualan
    - Laporan Pengeluaran
@@ -261,9 +311,16 @@ Fitur website travel:
    - Laporan Mutasi Deposit
    - Laporan Laba/Rugi
    - Laporan Customer
+   
 6. Arsip
-   - Tiket
+   - Tiket:
+   Data Tiket: invoice(dari data invoice); maskapai(dari data maskapai); penerbangan; nama penumpang; asal; tujuan; PP(One-way/sekali jalan, Two-way/Pulang pergi); keberangkatan; kode booking; qty; harga satuan; harga netto; edit
+   halaman index tiket ada tambah tiket di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+   
    - Layanan
+   Data Tiket: invoice(dari data invoice); jenis layanan; biaya; biaya nett; keterangan; edit; hapus
+   halaman index layanan ada tambah layanan di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+   
 7. Sistem
    - Account
    - User
