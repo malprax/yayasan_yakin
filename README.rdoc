@@ -206,3 +206,4 @@ sekarang istirahat dulu lanjut ke pembuatan website travel
 langkah selanjutnya buat pekerjaan air mancur
 1. solder rangkaian listrik
 2. buat mekaniknya: beli besi serba guna 1 batang
+3. print out program lengkapnya
