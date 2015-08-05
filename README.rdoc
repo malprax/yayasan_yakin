@@ -210,3 +210,11 @@ langkah selanjutnya buat pekerjaan air mancur
 
 jadi total ada tiga project di kerja hari ini sambil mencari cari projek baru lagi
 
+project idaman 1:
+buat antrian semacam mau cek ke dokter gigi atau dokter mata
+antrian belum bisa difinalisasi kalu tidak di telvon sama petugas
+antrian yang dibuat ada reportnya  langsung per tiap kali ada yang mendaftar ke email orang yang mendaftar berupa ucapan terimakasih telah melakukan pendaftaran mohon tunggu untuk dikonfirmasi
+trus juga dibuat report perakhir jam kerja berapa orang yang antri dan yang betul datang setelah dikonfirmasi ada databasenya juga bisa di print out
+
+
+
