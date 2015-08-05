@@ -196,3 +196,6 @@ sudo apt-get install git-core
 3 agustus 2015
 hari ini solder rangkaian
 tes driver mikro di windows
+
+5 agustus 2015
+tes pwm berhasil dengan 2 counter belum 1 counter
