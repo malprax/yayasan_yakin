@@ -201,7 +201,76 @@ tes driver mikro di windows
 tes pwm berhasil dengan 2 counter belum 1 counter
 mengerti fungsi int dan delay bial dipadukan
 
-sekarang istirahat dulu lanjut ke pembuatan website travel
+sekarang istirahat dulu lanjut ke pembuatan website travel:
+Fitur website travel:
+1. Dashboard
+2. Transaksi:
+   - Invoice:
+     Data invoice: tanggal; jenis invoice(tiket domestik, tiket internasional, tour internasional, tour domestik, paspor dan visa, hotel internasional, hotel domestik, travel, umroh, haji-umroh); no invoice; customer(terhubung dengan data customer) or customer baru; jumlah dibayar, jatuh tempo, komisi sales, Issued by(internal tester, travel demo, simful tech support, demo kasir), status(issued, hold, canceled), time limit, rekening(terhubung dengan data rekeing), sales(terhubung dengan data sales), keterangan
+     halaman index customer ada tambah invoice di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+   
+   - Topup:
+     Data top up: tanggal; maskapai(dari data maskapai); rekening(dari data rekening); nominal; keterangan
+     halaman index topup ada tambah topup di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+   
+   - Pengeluaran:
+     Data pengeluaran: tanggal; rekening; keterangan; jumlah; edit; hapus
+     halaman index pengeluaran ada tambah pengeluaran di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+   
+   - Penyesuaian:
+     Data penyesuaian: tanggal; rekening; keterangan; jumlah; edit; hapus
+     halaman index penyesuaian ada tambah penyesuaian di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
+   - Voucher Hotel:
+     Data Voucher Hotel: tanggal; customer(dari data customer); guest name; hotel(dari data hotel); nomor ref; check in(jquerydate), check out(jquerydate); catatan; edit; hapus
+     halaman index Voucher Hotel ada tambah voucher hotel di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
+   - Refund
+     Data penyesuaian: no ref, tanggal(jquerydate); invoice(dari data invoice); biaya refund; status(ok; pending[manajemen]; pending[maskapai]; pending[lainnya]);  edit; hapus
+     halaman index refund ada tambah refund di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+   
+   - Letter Of Guarantee
+3. Data: 
+   - Customer:
+     Data customer: nama lengkap; jenis customer(walk-in-pax, perorangan, perusahaan, partner, agen travel[l1]. agen travel[l2], agen travel[l3], lainnya); nomor telepon; email; alamat; kota; propinsi; catatan; edit
+     halaman index customer ada tambah customer di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
+     
+   - Maskapai:
+     Data Maskapai: nama maskapai; nomor telepon; website, edit
+     halaman index maskapai ada tambah customer di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
+   - Hotel:
+     Data Hotel: nama hotel; alamat; nomor telepon; catatan; edit; hapus
+     halaman index hotel ada tambah customer di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
+   - Rekening
+     Data Rekening: mata uang; nama akun; nomor rekening; pemegang rekening; jenis; edit
+     halaman index hotel ada tambah customer di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
+4. Office:
+   - Cabang
+   - Sales
+   - Inventaris
+5. Laporan
+   - Laporan Penjualan
+   - Laporan Pengeluaran
+   - Laporan Topup
+   - Laporan Piutang
+   - Laporan Mutasi Rekening
+   - Laporan Mutasi Deposit
+   - Laporan Laba/Rugi
+   - Laporan Customer
+6. Arsip
+   - Tiket
+   - Layanan
+7. Sistem
+   - Account
+   - User
+   - Hak Akses
+8. Panduan
+
+
 
 langkah selanjutnya buat pekerjaan air mancur
 1. solder rangkaian listrik
