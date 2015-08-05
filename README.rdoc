@@ -199,3 +199,6 @@ tes driver mikro di windows
 
 5 agustus 2015
 tes pwm berhasil dengan 2 counter belum 1 counter
+mengerti fungsi int dan delay bial dipadukan
+
+sekarang istirahat dulu lanjut ke pembuatan website travel
