@@ -343,4 +343,6 @@ antrian yang dibuat ada reportnya  langsung per tiap kali ada yang mendaftar ke 
 trus juga dibuat report perakhir jam kerja berapa orang yang antri dan yang betul datang setelah dikonfirmasi ada databasenya juga bisa di print out
 
 
+nda ada lagi pemberitahuan kalu kemarin sy nda deploy
+
 

@@ -6,10 +6,10 @@ class ApplicationController < ActionController::Base
   # check_authorization
   # raise CanCan::AccessDenied.new("You are not authorized to perform this action!", :custom_action, Project)
   
-  rescue_from CanCan::AccessDenied do |exception|
-    flash[:warning] = exception.message
-    redirect_to root_path
-  end
+  # rescue_from CanCan::AccessDenied do |exception|
+ #    flash[:warning] = exception.message
+ #    redirect_to root_path
+ #  end
   
   rescue_from ActiveRecord::RecordNotFound do
     flash[:warning] = 'Resource not found.'

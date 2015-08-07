@@ -7,6 +7,8 @@ defaults: &defaults
   adapter: postgresql
   encoding: unicode
   pool: 5
+  username: macbook
+  password: 
   # username: ENV["username"]
 #   password:
   host: localhost
@@ -14,16 +16,14 @@ defaults: &defaults
     
 development: 
   database: yayasan_yakin_development
-  username: ENV["database_username"]
-  password: 
   <<: *defaults 
 
-production:
-  database: yayasan_yakin_production
-  username: ENV["database_username"]
-  password: ENV["database_password"]
+# production:
+#   database: yayasan_yakin_production
+#   username: ENV["database_username"]
+#   password: ENV["database_password"]
   
-
+  #dfefc2a49527dbfe784e279696b38c951993578c1125b4caf4705e7a64da32a07c53a4cd23f36deba44fea3d3422f62b3092f1af611cf6d66383ec87ff5198be
 # test: &test
 #   database: yayasan_yakin_test
 #   <<: *defaults

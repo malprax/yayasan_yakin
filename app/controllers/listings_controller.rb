@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
 
   layout "dashboard"
-  before_action :authenticate_user!, except: [:beranda, :legalitas, :tabel, :struktur]
+  #before_action :authenticate_user!, except: [:beranda, :legalitas, :tabel, :struktur]
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
   def beranda
     data_table = GoogleVisualr::DataTable.new
@@ -81,7 +81,7 @@ class ListingsController < ApplicationController
   def update
     respond_to do |format|
       if @listing.update(listing_params)
-        format.html { redirect_to listings_path, notice: 'Listing was successfully updated.' }
+        format.html { redirect_to tabel_path, notice: 'Tabel Berhasil Di Isi.' }
         format.json { render :show, status: :ok, location: @listing }
       else
         format.html { render :edit }
