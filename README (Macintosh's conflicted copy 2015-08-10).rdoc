@@ -1,0 +1,350 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
+ini mau dipelajari bikin absensi
+
+tidak ada cara lain mesti ikut bongkar bongkar fedena project
+
+http://stackoverflow.com/questions/11991892/rails-3-taking-attendance-form-how-to-create-multiple-records
+
+hari ini sudah tamat jquery web
+dan sekarang lagi coba html dan css
+codecademy lebih jelas manfaatnya daripada yang lain
+mudah mudahan larut malam ini bisa selesai cssnya
+pending dulu kerjaan di upwork 
+ngga pernah dapat kerjaan ini bulan
+
+sudah mengerti tentang float
+sudah ngerti tentang parent dan nth-child()
+sudah ngerti tentang margin 
+sudah ngerti tentang padding
+sudah ngerti tentang em
+sudah ngerti tentang static
+sudah ngerti tentang apa itu inline-block block inline none
+belum jelas pelajaran position
+belajar rails lagi
+belajar javascript
+
+hari ini belajar rails tambah duino gem
+
+
+#kurangnya yayasan
+Logo Dan Icon
+Photo Kondisi Rumah Dan Santunan
+halaman beranda
+sumbangan dari donatur mesti otomatis tercatat di transaksi
+kata donatur di ubah nama menjadi donasi
+catat semua transaksi
+ada logika tambahkan dinama dalam tabel
+masih mencari halaman beranda yang bagus
+sekarang coba menunya tinggal beranda donatur santunan, tiap kali tabel donatur diisi maka kas bertambah dan kartu donatur dibuat, tiap kali tabel santunan diisi maka kas berkurang dan kartu santunan dibuat, 
+belum ada progress sampai hari ini karena masih banyak urusan
+coba hubungi pa idris untuk project selanjutnya
+
+malam ini off dulu codingannya
+besok mesti di lanjutkan pembukuannya yayasan yakin
+hari ini juga sudah cukup mencari upworkernya
+besok jg mesti ke warnet mandai
+dan bawa semuami voucher langsung
+
+tidak kuisi github ku hari kemarin
+ada dua proyek tambahan:
+1. buat auto sms security
+2. buat parking scanner
+
+habis konekku hari ini
+172107212653
+
+sudah dari speedy nda adaji tagihan bulan ini
+istirahat buat website malam malam akhir ramadhan ini
+belajar bdd dan tdd dulu
+start again with tdd and bdd
+forget to write for github
+ramadhan selesai alhamdulillah sampai jumpa lagi
+start to making a low rate hourly
+new season of coding
+tomorrow pi
+try implement angular as front end
+
+hari ini sudah search materi angular
+dan juga sudah mnecari materi rails tingkat lanjut
+saatnya dipelajari sedikit demi sedikit
+sesudah itu kita bisa coba satu persatu
+
+
+semoga bisa ada kejelasan satu aplikasi baru
+
+sudah ada kejelasan dari pihak yayasan
+mudah mudahan sudah bisa gajian akhir bulan agustus
+dalam hal ini kita patut bersyukur
+siapa tau ada faedah di balik semua ini
+dan mudah mudahan setelah itu masalah yang dihadapi nda lebih besar lagi daripada ini
+ngeri ngeri sedap masalahnya
+
+banyak yang mesti dilakukan besok terutama jalan jalan ke bantimurung
+with jhon and hana
+
+dari jalan jalan n besok mulai beraktifitas lagi
+
+negara api sudah menyerang
+hari yang lelah tapi belum bisa tidur chat
+offline dulu semua sudah beres
+
+besok agenda kita:
+print voucher
+bawa k mandai
+perbaiki website yayasanyakin
+belajar angular
+beli alat nya p yusuf 
+
+selesaikan semua agenda baru istirahat dulu
+
+besok lanjut k faraday
+pergi cari ram
+print voucher
+perbaiki lagi website yayasan
+belajar website lagi
+buat dokumentasi progres perkembangan websitenya yayasan
+kerjakan alatnya p yusuf
+
+#login as super user
+login as root
+apt-get update
+apt-get upgrade
+
+#install rvm
+#jangan install ini
+#curl -L get.rvm.io | bash -s stable
+#source ~/.rvm/scripts/rvm
+#sudrvm requirements
+
+
+/bin/bash --login
+sudo /usr/local/rvm/bin/rvm get stable
+sudo /usr/local/rvm/bin/rvm install 2.0.0
+rvm requirements
+rvm use --default 2.0.0
+
+#terminal zeus
+#1auto install: 
+apt-get install zsh
+
+#2manual install:
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+curl -L http://install.ohmyz.sh | sh
+
+#Find where ZSH has just been installed to
+which zsh
+
+#change shell
+chsh
+
+well, my solution maybe help you
+
+sudo vim /etc/pam.d/chsh
+then, comment auth required pam_shells.so
+
+sudo chsh $USER -s $(which zsh)
+
+
+#3manual install zsh
+Prereq:
+
+apt-get install zsh
+apt-get install git-core
+Getting zsh to work in ubuntu is weird, since sh does not understand the source command. So, you do this to install zsh
+
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+and then you change your shell to zsh
+
+chsh -s `which zsh`
+and then restart
+
+sudo shutdown -r 0
+
+
+#install git
+sudo apt-get install git-core
+
+
+
+3 agustus 2015
+hari ini solder rangkaian
+tes driver mikro di windows
+
+5 agustus 2015
+tes pwm berhasil dengan 2 counter belum 1 counter
+mengerti fungsi int dan delay bial dipadukan
+
+sekarang istirahat dulu lanjut ke pembuatan website travel:
+Fitur website travel:
+1. Dashboard
+2. Transaksi:
+   - Invoice:
+     Data invoice: tanggal(jquerydate); jenis invoice(tiket domestik, tiket internasional, tour internasional, tour domestik, paspor dan visa, hotel internasional, hotel domestik, travel, umroh, haji-umroh); no invoice(langsung dibuat dengan kode TD/date/month/year/no_i); customer(dari data customer) or customer baru; jumlah dibayar, jatuh tempo, komisi sales, Issued by(internal tester, travel demo, simful tech support, demo kasir), status(issued, hold, canceled), time limit, rekening(dari data rekeing), sales(dari data sales), keterangan
+     halaman index customer ada tambah invoice di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+   
+   - Topup:
+     Data top up: tanggal; maskapai(dari data maskapai); rekening(dari data rekening); nominal; keterangan
+     halaman index topup ada tambah topup di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+   
+   - Pengeluaran:
+     Data pengeluaran: tanggal; rekening; keterangan; jumlah; edit; hapus
+     halaman index pengeluaran ada tambah pengeluaran di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+   
+   - Penyesuaian:
+     Data penyesuaian: tanggal; rekening; keterangan; jumlah; edit; hapus
+     halaman index penyesuaian ada tambah penyesuaian di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
+   - Voucher Hotel:
+     Data Voucher Hotel: tanggal; customer(dari data customer); guest name; hotel(dari data hotel); nomor ref; check in(jquerydate), check out(jquerydate); catatan; edit; hapus
+     halaman index Voucher Hotel ada tambah voucher hotel di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
+   - Refund
+     Data Refund: no ref, tanggal(jquerydate); invoice(dari data invoice); biaya refund; status(ok; pending[manajemen]; pending[maskapai]; pending[lainnya]);  edit; hapus
+     halaman index refund ada tambah refund di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+   
+   - Letter Of Guarantee
+     Data Refund: no ref, tanggal(jquerydate); Nomor LG(buat otomatis dengan kode LG/date/month/year/no.index) bisa link to show; Recipient; Remarks; edit; hapus
+     halaman index Letter Of Guarantee ada tambah LG di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     halaman shownya
+     kiri :
+     kode LG
+     tombol print LG atau edit LG
+     
+     
+     tulisan Letter Of Guarantee
+     Recipient :
+     Date:
+     
+     Details
+     kolom keterangan; kolom mata uang; kolom jumlah; kolom edit; kolom hapus 
+     
+     Total 
+     
+     Additional remarks
+     Paid
+     
+     kanan:
+     link kembali sejajar dengan tombol print/edit lg
+     tombol tambah item sejajar dengan details
+     
+     
+     Print Out nya:
+     Kop Travel   Letter Of Guarantee
+     
+     Tanggal:   Kepada:
+     Ref:  Kode_LG:
+     
+     Dear Sir Or Madam
+     Please acknowledge this letter of guarantee which stretches as follows:
+     
+     Total || Description || Amount
+     
+     We hereby guarantee to settle payment of above service as per credit terms agreement. We appreciate for your king cooperations
+                                                                                                   
+                                                                                                   Jakarta, 18 september 2013
+                                                                                                   
+                                                                                                   Travel Demo
+3. Data: 
+   - Customer:
+     Data customer: nama lengkap; jenis customer(walk-in-pax, perorangan, perusahaan, partner, agen travel[l1]. agen travel[l2], agen travel[l3], lainnya); nomor telepon; email; alamat; kota; propinsi; catatan; edit
+     halaman index customer ada tambah customer di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
+     
+   - Maskapai:
+     Data Maskapai: nama maskapai; nomor telepon; website, edit
+     halaman index maskapai ada tambah customer di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
+   - Hotel:
+     Data Hotel: nama hotel; alamat; nomor telepon; catatan; edit; hapus
+     halaman index hotel ada tambah customer di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
+   - Rekening
+     Data Rekening: mata uang; nama akun; nomor rekening; pemegang rekening; jenis; edit
+     halaman index hotel ada tambah customer di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
+4. Office:
+   - Cabang:
+     Data Cabang: nama cabang; alamat; nomor telepon; email; penanggung jawab; edit; hapus
+     halaman index cabang ada tambah cabang di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
+   - Sales:
+     Data Sales: cabang(data dari cabang); nama sales; nomor telepon; alamat; email; catatan; edit; hapus
+     halaman index sales ada tambah sales di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+     
+   - Inventaris
+     Data Sales: nama barang; harga; jumlah; kondisi; tanggal pembelian(jquerydate); catatan; edit; hapus
+     halaman index inventaris ada tambah inventaris di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+
+5. Laporan
+   - Laporan Penjualan
+   - Laporan Pengeluaran
+   - Laporan Topup
+   - Laporan Piutang
+   - Laporan Mutasi Rekening
+   - Laporan Mutasi Deposit
+   - Laporan Laba/Rugi
+   - Laporan Customer
+   
+6. Arsip
+   - Tiket:
+   Data Tiket: invoice(dari data invoice); maskapai(dari data maskapai); penerbangan; nama penumpang; asal; tujuan; PP(One-way/sekali jalan, Two-way/Pulang pergi); keberangkatan; kode booking; qty; harga satuan; harga netto; edit
+   halaman index tiket ada tambah tiket di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+   
+   - Layanan
+   Data Tiket: invoice(dari data invoice); jenis layanan; biaya; biaya nett; keterangan; edit; hapus
+   halaman index layanan ada tambah layanan di kiri atas dan search di kanan atas, bagian bawah ada paginasi
+   
+7. Sistem
+   - Account
+   - User
+   - Hak Akses
+8. Panduan
+
+
+
+langkah selanjutnya buat pekerjaan air mancur
+1. solder rangkaian listrik
+2. buat mekaniknya: beli besi serba guna 1 batang
+3. print out program lengkapnya
+
+jadi total ada tiga project di kerja hari ini sambil mencari cari projek baru lagi
+
+project idaman 1:
+buat antrian semacam mau cek ke dokter gigi atau dokter mata
+antrian belum bisa difinalisasi kalu tidak di telvon sama petugas
+antrian yang dibuat ada reportnya  langsung per tiap kali ada yang mendaftar ke email orang yang mendaftar berupa ucapan terimakasih telah melakukan pendaftaran mohon tunggu untuk dikonfirmasi
+trus juga dibuat report perakhir jam kerja berapa orang yang antri dan yang betul datang setelah dikonfirmasi ada databasenya juga bisa di print out
+
+
+nda ada lagi pemberitahuan kalu kemarin sy nda deploy
+Alhamdulillah ada kejelasan perkembangan di kampus ini
+on the way pangkep
+Hari ini wedding party nya mR Irman
+
