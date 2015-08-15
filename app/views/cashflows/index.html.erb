@@ -23,28 +23,28 @@
               <td class="center"><%= number_to_currency(cashflow.debit, precision: 0, unit: "Rp ") %></td>
               <td class="center"><%= number_to_currency(cashflow.credit, precision: 0, unit: "Rp ") %></td>
               <td class="hidden-sm hidden-xs"><%= cashflow.description.camelize %></td>
-              <% if signed_in? %>
+              <%# if signed_in? %>
               <td><%= link_to '<span class="glyphicon glyphicon-edit" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Edit"></span>'.html_safe, edit_cashflow_path(cashflow) %></td>
               <td><%= link_to '<span class="glyphicon glyphicon-remove" aria-hidden="true"data-toggle="tooltip" data-placement="top" title="Hapus"></span>'.html_safe,  cashflow, method: :delete, data: { confirm: 'Anda Yakin Hapus?' } %></td>
-              <% end %>
+              <%# end %>
             </tr>
           <% end %>
             <tr>
               <td colspan="2" class="right warnatabelbiru"><strong>Total Saldo Kas</strong></td>
               <td class="center"><%= link_to "#{  number_to_currency(@cashflows_saldo.saldo_kas, precision:0, unit: "Rp ")}", "#" %></td>
-              <% if signed_in? %> 
+              <%# if signed_in? %> 
                   <td colspan="4"></td>
-              <% else %>
-                  <td colspan="2" class="hidden-xs hidden-sm"></td>
-              <% end %>
+              <%# else %>
+                  <!-- <td colspan="2" class="hidden-xs hidden-sm"></td> -->
+              <%# end %>
             </tr>
         </tbody>
       </table>
 
       <br>
-      <% if signed_in? %>
+      <%# if signed_in? %>
       <%= link_to 'Buat Transaksi', new_cashflow_path %>
-      <% end %>
+      <%# end %>
     </div>
   </div>
 </div>

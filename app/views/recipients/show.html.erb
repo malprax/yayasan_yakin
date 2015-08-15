@@ -87,13 +87,13 @@
                 <td><%= card.date %></td>
                 <td><%= "#{number_to_currency(card.amount, precision: 0, unit: "Rp ")}" %></td>
                 <td><%= card.employee %></td>
-                <% if signed_in? %>
+                <%# if signed_in? %>
                 <% if card.amount || card.employee || card.date  %>
                 <td><%= link_to 'Edit', edit_recipient_card_path(@recipient, card)  %></td>
                 <% else %>
                 <td><%= link_to 'Isi', edit_recipient_card_path(@recipient, card)  %></td>
                 <% end %>
-                <% end %>
+                <%# end %>
               </tr> 
             <% end %>
           </tbody>
